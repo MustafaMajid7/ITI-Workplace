@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        label {
+        width:100px;
+        display: inline-block;
+        }
+      </style>
+</head>
+<body>
+    <h1>Fill out your info</h1>
+    <form action="./redirect.html">
+        <label >First Name</label>
+        <input type="text" name="first_name" placeholder="first_name"><br>
+        
+        <label>Last Name</label>
+        <input type="text" name="last_name" placeholder="last_name"><br>
+        
+        <label>Email</label>
+        <input type="email" name="Email" placeholder="Email"><br>
+        
+        <label>Gender</label>
+        <input type="radio" id="Male" name="Gender" value="Male">
+        <label for="Male">Male</label><br>
+        <label></label>
+        <input type="radio" id="Female" name="Gender" value="Female">
+        <label for="Male">Female</label><br>
+        
+        <label>Flavor</label>
+        <input type="checkbox" id="Flavor" name="Flavor" value="Pepperoni">
+        <label for="Flavor" style="width: 80px;"> Pepperoni</label>
+        <input type="checkbox" id="Flavor" name="Flavor" value="Cheese Lovers">
+        <label for="Flavor"> Cheese Lovers</label><br>
+        <label></label>
+        <input type="checkbox" id="Flavor" name="Flavor" value="Bacon">
+        <label for="Flavor"> Bacon</label><br>
+
+        <label for="Comments" style="position:relative; top: -75px;"> Comments</label>
+        <textarea name="Comments" rows="10" cols="30"></textarea>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

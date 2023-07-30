@@ -1,0 +1,15 @@
+E:\ITI\workplace\testing\ConsoleApp1\bin\Debug\net7.0\Testing.exe
+E:\ITI\workplace\testing\ConsoleApp1\bin\Debug\net7.0\Testing.deps.json
+E:\ITI\workplace\testing\ConsoleApp1\bin\Debug\net7.0\Testing.runtimeconfig.json
+E:\ITI\workplace\testing\ConsoleApp1\bin\Debug\net7.0\Testing.dll
+E:\ITI\workplace\testing\ConsoleApp1\bin\Debug\net7.0\Testing.pdb
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\Testing.csproj.AssemblyReference.cache
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\Testing.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\Testing.AssemblyInfoInputs.cache
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\Testing.AssemblyInfo.cs
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\Testing.csproj.CoreCompileInputs.cache
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\Testing.dll
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\refint\Testing.dll
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\Testing.pdb
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\Testing.genruntimeconfig.cache
+E:\ITI\workplace\testing\ConsoleApp1\obj\Debug\net7.0\ref\Testing.dll
