@@ -108,29 +108,46 @@
 //   1000
 // );
 
-/* ---------------------------------------Task 4 not finished--------------------------------------*/
+/* ---------------------------------------Task 4 --------------------------------------*/
 
 // var newWindow = open("", "", "width=100,height=100");
 // var interval,
 //   flag = true;
 
-// interval = setInterval(function () {
-//   newWindow.moveBy(20, 20);
-//   newWindow.screenY === 700?
-// }, 100);
+// function stop() {
+//   clearInterval(interval);
+// }
 
-// clearInterval(interval);
-
-// interval = setInterval(function () {
-//   if (newWindow.screenX === screen.availWidth) {
-//     flag = false;
+// function run() {
+//   if (flag) {
+//     forwarding();
 //   } else {
-//     flag = true;
+//     returning();
 //   }
-//   flag == true ? newWindow.moveBy(10, 20) : newWindow.moveBy(-20, -20);
-// }, 100);
+// }
+// function forwarding() {
+//   interval = setInterval(function () {
+//     if (newWindow.screenY === 550) {
+//       flag = false;
+//       clearInterval(interval);
+//       returning();
+//     }
+//     newWindow.moveBy(10, 10);
+//   }, 30);
+// }
 
-// clearInterval(interval);
+// function returning() {
+//   interval = setInterval(function () {
+//     if (newWindow.screenY === 0) {
+//       flag = true;
+//       clearInterval(interval);
+//       forwarding();
+//     }
+//     newWindow.moveBy(-10, -10);
+//   }, 30);
+// }
+
+// forwarding();
 
 /* ---------------------------------------Task 5 --------------------------------------*/
 

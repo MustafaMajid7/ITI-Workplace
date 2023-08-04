@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ---------------------------Task 1 --------------------------------    -->
+    <!-- <button class="button-63" type="button" onclick="getAllUsers()">Get Users</button> -->
+
+    <!-- ---------------------------Task 5 --------------------------------    -->
+
+    <label for="name" style="margin-top: 20px">Enter Your Name :</label>
+    <input type="text" name="name" placeholder="Enter Your Name" /><br />
+    <label for="age">Enter Your Age :</label>
+    <input type="text" name="age" placeholder="Enter Your Age" /><br />
+
+    <label for="gender">Select Your Gender :</label><br />
+
+    <input type="radio" name="gender" value="male" />
+    <label for="male"><img src="./images/male.jpeg" /></label>
+
+    <input type="radio" name="gender" value="female" />
+    <label for="female"><img src="./images/female.jpeg" /></label><br />
+
+    <label for="age">Select Your Favourite Color :</label>
+    <select name="color">
+      <option selected disabled>-- Choose your color --</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+
+    <button class="button-63" type="button" onclick="setProfile()">
+      Register
+    </button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
