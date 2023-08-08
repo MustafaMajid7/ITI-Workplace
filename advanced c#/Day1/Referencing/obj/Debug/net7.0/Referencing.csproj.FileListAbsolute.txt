@@ -1,0 +1,12 @@
+E:\ITI\workplace\advanced c#\Day1\Referencing\bin\Debug\net7.0\Referencing.deps.json
+E:\ITI\workplace\advanced c#\Day1\Referencing\bin\Debug\net7.0\Referencing.dll
+E:\ITI\workplace\advanced c#\Day1\Referencing\bin\Debug\net7.0\Referencing.pdb
+E:\ITI\workplace\advanced c#\Day1\Referencing\obj\Debug\net7.0\Referencing.csproj.AssemblyReference.cache
+E:\ITI\workplace\advanced c#\Day1\Referencing\obj\Debug\net7.0\Referencing.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\workplace\advanced c#\Day1\Referencing\obj\Debug\net7.0\Referencing.AssemblyInfoInputs.cache
+E:\ITI\workplace\advanced c#\Day1\Referencing\obj\Debug\net7.0\Referencing.AssemblyInfo.cs
+E:\ITI\workplace\advanced c#\Day1\Referencing\obj\Debug\net7.0\Referencing.csproj.CoreCompileInputs.cache
+E:\ITI\workplace\advanced c#\Day1\Referencing\obj\Debug\net7.0\Referencing.dll
+E:\ITI\workplace\advanced c#\Day1\Referencing\obj\Debug\net7.0\refint\Referencing.dll
+E:\ITI\workplace\advanced c#\Day1\Referencing\obj\Debug\net7.0\Referencing.pdb
+E:\ITI\workplace\advanced c#\Day1\Referencing\obj\Debug\net7.0\ref\Referencing.dll
