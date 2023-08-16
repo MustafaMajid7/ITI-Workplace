@@ -26,22 +26,59 @@
             Q3ASR.Add(new Answer(2, "Asia"));
             Q3ASR.Add(new Answer(3, "both"));
             Q3ASR.Add(new Answer(4, "none from the above"));
+            
+            
+            #region using dictionary
 
-            Dictionary<Question,List<Answer> > exam = new Dictionary<Question, List<Answer>>();
+            //Dictionary<Question, List<Answer>> exam = new Dictionary<Question, List<Answer>>();
 
-            exam.Add(q1, Q1ASR);
-            exam.Add(q2, Q2ASR);
-            exam.Add(q3, Q3ASR);
+            //exam.Add(q1, Q1ASR);
+            //exam.Add(q2, Q2ASR);
+            //exam.Add(q3, Q3ASR);
 
-            foreach (KeyValuePair<Question, List<Answer>> item in exam)
-            {
-                Console.WriteLine(item.Key);
-                foreach (Answer answer in item.Value)
-                {
-                    Console.WriteLine(answer);
-                }
-                Console.WriteLine();
-            }
+            //foreach (KeyValuePair<Question, List<Answer>> item in exam)
+            //{
+            //    Console.WriteLine(item.Key);
+            //    foreach (Answer answer in item.Value)
+            //    {
+            //        Console.WriteLine(answer);
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            #endregion
+
+            #region using delegate
+
+            //List<Question> questions = new List<Question>();
+
+            //questions.Add(q1);
+            //questions.Add(q2);
+            //questions.Add(q3);
+
+            //List<List<Answer>> answers = new List<List<Answer>>() { Q1ASR,Q2ASR,Q3ASR};
+
+            //Func<string> action=null;
+
+
+            //int i = 0;
+            //foreach (Question question in questions)
+            //{
+
+            //    Console.WriteLine(question);
+
+            //    foreach (Answer answer in answers[i])
+            //        action += answer.ToString;
+
+            //    foreach (var item in action.GetInvocationList())
+            //        Console.WriteLine(item.Target);
+
+            //    action -= action;
+            //    i += 1;
+
+            //}
+
+            #endregion
 
         }
     }

@@ -1,0 +1,16 @@
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\bin\Debug\net7.0-windows\WindowsFormApp.exe
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\bin\Debug\net7.0-windows\WindowsFormApp.deps.json
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\bin\Debug\net7.0-windows\WindowsFormApp.runtimeconfig.json
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\bin\Debug\net7.0-windows\WindowsFormApp.dll
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\bin\Debug\net7.0-windows\WindowsFormApp.pdb
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\WindowsFormApp.Home.resources
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\WindowsFormApp.csproj.GenerateResource.cache
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\WindowsFormApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\WindowsFormApp.AssemblyInfoInputs.cache
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\WindowsFormApp.AssemblyInfo.cs
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\WindowsFormApp.csproj.CoreCompileInputs.cache
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\WindowsFormApp.dll
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\refint\WindowsFormApp.dll
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\WindowsFormApp.pdb
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\WindowsFormApp.genruntimeconfig.cache
+E:\ITI\workplace\advanced c#\Day7\WindowsFormApp\obj\Debug\net7.0-windows\ref\WindowsFormApp.dll
