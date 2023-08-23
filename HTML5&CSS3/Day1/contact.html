@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 200px;
+        margin: 10px;
+      }
+      fieldset {
+        margin: 20px;
+        text-align: left;
+      }
+      form {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      autocomplete="on"
+      style="background-color: rgb(82, 74, 87); color: aliceblue; padding: 15px"
+    >
+      <fieldset style="background-color: rgb(59, 9, 37)">
+        <legend>HTML5 input fields</legend>
+        <label>color</label>
+        <input type="color" /><br />
+        <label>dateTime</label>
+        <input type="datetime" /><br />
+        <label>URL</label>
+        <input type="url" /><br />
+        <label>Time</label>
+        <input type="time" /><br />
+        <label>month</label>
+        <input type="month" /><br />
+        <label>week</label>
+        <input type="week" /><br />
+      </fieldset>
+      <fieldset style="background-color: rgb(117, 75, 12)">
+        <legend>HTML5 input fields</legend>
+        <label>telephone</label>
+        <input
+          type="tel"
+          autofocus
+          pattern="[0-9]{11}"
+          title="telephone number must be 11 numbers"
+        /><br />
+        <label>range</label>
+        <input type="range" step="4" min="0" max="16" value="0" /><br />
+        <label>file</label>
+        <input type="file" /><br />
+        <label style="position: relative; top: -50px">image</label>
+        <input
+          type="image"
+          src="src/img7.jpg"
+          width="100px"
+          height="100px"
+        /><br />
+        <label>date</label>
+        <input type="date" /><br />
+        <label>Number</label>
+        <input type="number" min="0" max="100" step="5" />
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

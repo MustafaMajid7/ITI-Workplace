@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1>Hello from Html5 and CSS3</h1>
+        <span style="font-size: 20px; color: black"> Audio Player :</span>
+        <meter
+          id="audio_player"
+          min="0"
+          max="125"
+          low="50"
+          high="100"
+          value="0"
+          optimum="30"
+        ></meter>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="#" style="text-decoration: none">Home</a></li>
+          <li><a href="#" style="text-decoration: none">About</a></li>
+          <li>
+            <a href="contact.html" style="text-decoration: none">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="Middle_section">
+      <figure>
+        <video width="100%" height="600" controls loop autoplay>
+          <source src="src/129296 (360p).mp4" type="video/mp4" />
+        </video>
+        <figcaption style="font-size: 28px; text-align: center">
+          introductory video
+        </figcaption>
+      </figure>
+      <!-- <audio hidden autoplay loop>
+        <source
+          src="src/deep-future-garage-royalty-free-music-163081.mp3"
+          type="audio/mpeg"
+        />
+      </audio> -->
+    </section>
+
+    <footer
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+      "
+    >
+      <section style="width: 75%">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quam
+        reiciendis eius asperiores amet omnis, repellat consequuntur sapiente?
+        Quisquam atque tempora dolorum dolore id repellat rem quis vel fuga
+        quidem.
+      </section>
+      <section style="width: 20%; text-align: center">
+        <a href="#" style="font-size: 40px"> Up to header</a>
+      </section>
+    </footer>
+    <script>
+      setInterval(function () {
+        let x = parseInt(
+          document.getElementById("audio_player").getAttribute("value")
+        );
+        let max = parseInt(
+          document.getElementById("audio_player").getAttribute("max")
+        );
+        x = ++x % 120;
+        document.getElementById("audio_player").setAttribute("value", x);
+      }, 1000);
+    </script>
+  </body>
+</html>
