@@ -2,13 +2,17 @@ function submitting(e) {
   e.preventDefault();
   let count = 0;
   document.getElementById("nots").innerHTML = "";
-  if (!/[A-Za-z\ ]{7,20}/.test(document.getElementsByName("fname")[0].value)) {
+  if (
+    !/^([A-Za-z\ ]{7,20})$/.test(document.getElementsByName("fname")[0].value)
+  ) {
     var par = document.createElement("p");
     par.innerHTML = "- name must be in range between (7-20) characters";
     document.getElementById("nots").appendChild(par);
   } else count++;
   if (
-    !/[A-Za-z0-9]{8,15}/.test(document.getElementsByName("password")[0].value)
+    !/^([A-Za-z0-9]{8,15})$/.test(
+      document.getElementsByName("password")[0].value
+    )
   ) {
     var par = document.createElement("p");
     par.innerHTML =

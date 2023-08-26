@@ -1,9 +1,11 @@
-// import {
-//   hasCookie,
-//   getCookie,
-//   setCookie,
-//   getAllCookie,
-// } from "../thirdParty/cookieAPI.js";
+import {
+  hasCookie,
+  getCookie,
+  setCookie,
+  getAllCookie,
+  deleteCookie,
+} from "../thirdParty/cookieAPI.js";
+
 //-------------------------------------- Slider --------------------------------------
 
 var slider_arr = [
@@ -20,7 +22,7 @@ var slider_arr = [
   "/src/slider/img11.jpg",
   "/src/slider/img12.jpg",
 ];
-let slider_index = 1;
+var slider_index = 1;
 function next() {
   slider_index %= 12;
   let slider = document.getElementById("slider");
@@ -108,8 +110,8 @@ var items_arr = [
   { src: "/src/pcs/img5.jpeg", price: 1200, quantity: 6, cat: "pcs", cart: 0 },
   { src: "/src/pcs/img6.jpg", price: 1500, quantity: 7, cat: "pcs", cart: 0 },
 ];
-let cart_empty = true;
-let show_car = true;
+var cart_empty = true;
+var show_car = true;
 function add_new_element(index) {
   let item = document.createElement("div");
   let image = document.createElement("img");
@@ -117,7 +119,7 @@ function add_new_element(index) {
   addBTN.addEventListener("click", function () {
     restore_quantity(index, this);
   });
-  addBTN.innerText = "Remove from cart";
+  addBTN.innerText = "Remove";
   image.setAttribute("src", items_arr[index].src);
   let spanQ = document.createElement("span");
   spanQ.innerText = `Quantity : ${++items_arr[index].cart}`;
@@ -129,8 +131,6 @@ function add_new_element(index) {
 function modify_cart(index) {
   let cart_items = document.getElementById("shopping_cart").childNodes;
   for (let i = 0; i < cart_items.length; i++) {
-    console.log(i);
-    console.log(cart_items[i].firstChild);
     if (cart_items[i].firstChild.getAttribute("src") == items_arr[index].src) {
       cart_items[i].childNodes[1].innerText = `Quantity : ${++items_arr[index]
         .cart}`;
@@ -146,6 +146,7 @@ function subtract_quantity(index, that) {
   if (items_arr[index].quantity === 0) parent.parentNode.removeChild(parent);
 }
 function restore_quantity(index, that) {
+  deleteCookie(index);
   let div = that.parentNode;
   let quantity = parseInt(String(div.childNodes[1].innerText).indexOf(":")) + 2;
   quantity = String(div.childNodes[1].innerText).substring(quantity);
@@ -158,9 +159,17 @@ function restore_quantity(index, that) {
     document.getElementById("shopping_cart").innerHTML = "Cart is empty";
     cart_empty = true;
   }
+  let childs = document.getElementById("items").childNodes;
+  for (let i = 0; i < childs.length; i++) {
+    if (childs[i].childNodes[0].getAttribute("src") == items_arr[index].src) {
+      childs[
+        i
+      ].childNodes[2].innerText = `Quantity ${items_arr[index].quantity} Price ${items_arr[index].price}`;
+    }
+  }
 }
 function addToCart(index, that) {
-  // add_to_cookies(index);
+  add_to_cookies(index);
   if (cart_empty) {
     cart_empty = false;
     document.getElementById("shopping_cart").innerHTML = "";
@@ -170,7 +179,7 @@ function addToCart(index, that) {
 
   subtract_quantity(index, that);
 }
-function items(that) {
+function show_items(that) {
   document.getElementById("items").innerHTML = "";
   let category = that.parentNode.getAttribute("id");
   for (let index = 0; index < items_arr.length; index++) {
@@ -193,21 +202,90 @@ function items(that) {
     document.getElementById("items").appendChild(div);
   }
 }
-function show_cart() {
-  let x = document.getElementById("shopping_cart");
-  if (show_car) {
-    show_car = false;
-    x.style.display = "block";
-  } else {
-    show_car = true;
-    x.style.display = "none";
-  }
-}
-// function add_to_cookies(index) {
-//   if (hasCookie(items_arr[index].src)) {
-//     let sum = parseInt(getCookie(items_arr[index].src));
-//     setCookie(items_arr[index].src, ++sum);
+// function show_cart() {
+//   let x = document.getElementById("shopping_cart");
+//   if (show_car) {
+//     show_car = false;
+//     x.style.display = "block";
 //   } else {
-//     setCookie(items_arr[index].src, 1);
+//     show_car = true;
+//     x.style.display = "none";
 //   }
 // }
+
+function add_to_cookies(index) {
+  if (hasCookie(index)) {
+    let sum = parseInt(getCookie(index));
+    setCookie(index, ++sum);
+  } else {
+    setCookie(index, 1);
+  }
+}
+var add_events = document.querySelectorAll("span >span");
+for (let index = 0; index < add_events.length; index++) {
+  add_events[index].addEventListener("click", function () {
+    show_items(this);
+  });
+}
+
+// document
+//   .getElementById("shopping_cart_icon")
+//   .addEventListener("click", show_cart);
+
+document
+  .getElementById("shopping_cart_icon")
+  .addEventListener("mouseout", function () {
+    document.getElementById("shopping_cart").style.display = "none";
+  });
+document
+  .getElementById("shopping_cart_icon")
+  .addEventListener("mouseover", function () {
+    document.getElementById("shopping_cart").style.display = "block";
+  });
+document
+  .getElementById("shopping_cart")
+  .addEventListener("mouseout", function () {
+    document.getElementById("shopping_cart").style.display = "none";
+  });
+document
+  .getElementById("shopping_cart")
+  .addEventListener("mouseover", function () {
+    document.getElementById("shopping_cart").style.display = "block";
+  });
+
+document.getElementById("slider").childNodes[1].addEventListener("click", next);
+document
+  .getElementById("slider")
+  .childNodes[3].addEventListener("click", previous);
+
+let get_cart_items = getAllCookie();
+
+for (let i = 0; i < get_cart_items.length; i++) {
+  let index = parseInt(get_cart_items[i].split("=")[0]);
+  let cart_item_quantity = parseInt(get_cart_items[i].split("=")[1]);
+
+  if (cart_empty) {
+    cart_empty = false;
+    document.getElementById("shopping_cart").innerHTML = "";
+  }
+
+  let x = document.getElementById("summation");
+  x.innerText = Number(x.innerText) + cart_item_quantity;
+
+  let item = document.createElement("div");
+  let image = document.createElement("img");
+  let addBTN = document.createElement("button");
+  addBTN.addEventListener("click", function () {
+    restore_quantity(index, this);
+  });
+  addBTN.innerText = "Remove";
+  image.setAttribute("src", items_arr[index].src);
+  let spanQ = document.createElement("span");
+  items_arr[index].cart += cart_item_quantity;
+  items_arr[index].quantity -= cart_item_quantity;
+  spanQ.innerText = `Quantity : ${items_arr[index].cart}`;
+  item.appendChild(image);
+  item.appendChild(spanQ);
+  item.appendChild(addBTN);
+  document.getElementById("shopping_cart").appendChild(item);
+}

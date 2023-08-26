@@ -28,7 +28,6 @@
       <div id="div_cart">
         <span
           id="shopping_cart_icon"
-          onclick="show_cart()"
           class="material-symbols-outlined"
           style="width: 50px; text-align: center"
         >
@@ -40,38 +39,23 @@
     <div id="slider">
       <button
         class="button-62"
-        onclick="next()"
         style="float: right; position: relative; top: 50%"
       >
         next
       </button>
-      <button
-        class="button-62"
-        onclick="previous()"
-        style="position: relative; top: 50%"
-      >
+      <button class="button-62" style="position: relative; top: 50%">
         previous
       </button>
     </div>
     <div id="shopping_cart">Cart is Empty</div>
     <div id="core">
       <div id="cat">
-        <span id="tabs"
-          ><span onclick="items(this)" style="cursor: pointer">Tablets</span>
-        </span>
+        <span id="tabs"><span style="cursor: pointer">Tablets</span> </span>
         <span id="phones">
-          <span onclick="items(this)" style="cursor: pointer">Phones</span>
+          <span style="cursor: pointer">Phones</span>
         </span>
-        <span id="laps"
-          ><span onclick="items(this)" style="cursor: pointer"
-            >Laptops</span
-          ></span
-        >
-        <span id="pcs"
-          ><span onclick="items(this)" style="cursor: pointer">
-            PCs
-          </span></span
-        >
+        <span id="laps"><span style="cursor: pointer">Laptops</span></span>
+        <span id="pcs"><span style="cursor: pointer"> PCs </span></span>
       </div>
       <div id="items"></div>
     </div>
