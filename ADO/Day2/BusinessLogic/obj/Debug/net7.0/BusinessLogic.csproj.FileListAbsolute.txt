@@ -1,0 +1,15 @@
+E:\ITI\workplace\ADO\Day2\BusinessLogic\bin\Debug\net7.0\BusinessLogic.deps.json
+E:\ITI\workplace\ADO\Day2\BusinessLogic\bin\Debug\net7.0\BusinessLogic.dll
+E:\ITI\workplace\ADO\Day2\BusinessLogic\bin\Debug\net7.0\BusinessLogic.pdb
+E:\ITI\workplace\ADO\Day2\BusinessLogic\bin\Debug\net7.0\DataAccess.dll
+E:\ITI\workplace\ADO\Day2\BusinessLogic\bin\Debug\net7.0\DataAccess.pdb
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.AssemblyReference.cache
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfoInputs.cache
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfo.cs
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CoreCompileInputs.cache
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CopyComplete
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.dll
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\refint\BusinessLogic.dll
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.pdb
+E:\ITI\workplace\ADO\Day2\BusinessLogic\obj\Debug\net7.0\ref\BusinessLogic.dll

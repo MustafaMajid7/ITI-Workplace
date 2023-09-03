@@ -1,0 +1,12 @@
+E:\ITI\workplace\ADO\Day2\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
+E:\ITI\workplace\ADO\Day2\DataAccess\bin\Debug\net7.0\DataAccess.dll
+E:\ITI\workplace\ADO\Day2\DataAccess\bin\Debug\net7.0\DataAccess.pdb
+E:\ITI\workplace\ADO\Day2\DataAccess\obj\Debug\net7.0\DataAccess.csproj.AssemblyReference.cache
+E:\ITI\workplace\ADO\Day2\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\workplace\ADO\Day2\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
+E:\ITI\workplace\ADO\Day2\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
+E:\ITI\workplace\ADO\Day2\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
+E:\ITI\workplace\ADO\Day2\DataAccess\obj\Debug\net7.0\DataAccess.dll
+E:\ITI\workplace\ADO\Day2\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
+E:\ITI\workplace\ADO\Day2\DataAccess\obj\Debug\net7.0\DataAccess.pdb
+E:\ITI\workplace\ADO\Day2\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll
