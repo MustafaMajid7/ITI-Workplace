@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- start nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./src/logo_1.png" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-lg-4 py-lg-3">
+              <a
+                class="nav-link"
+                role="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop"
+                ><i class="fa-solid fa-search"></i>
+              </a>
+            </li>
+
+            <li class="nav-item px-lg-4 py-lg-3">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i class="fa-solid fa-user"></i
+              ></a>
+            </li>
+            <li class="nav-item px-lg-4 py-lg-3">
+              <a
+                class="nav-link"
+                data-bs-toggle="offcanvas"
+                href="#offcanvasExample"
+                role="button"
+                aria-controls="offcanvasExample"
+              >
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- start offcanvas -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you
+          have chosen. Like, text, images, lists, etc.
+        </div>
+        <div class="dropdown mt-3">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-top"
+      tabindex="-1"
+      id="offcanvasTop"
+      aria-labelledby="offcanvasTopLabel"
+    >
+      <div class="offcanvas-body">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    <!-- end offcanvas -->
+
+    <div class="container-fluid text-center my-auto" id="categories">
+      <div class="row justify-content-center">
+        <div class="col-1">Home</div>
+        <div
+          class="col-1 border border-bottom-0 border-top-0 border-end-0 border-light"
+        >
+          <div class="dropdown">Shop</div>
+        </div>
+        <div
+          class="col-1 border border-bottom-0 border-top-0 border-end-0 border-light"
+        >
+          <a
+            class="dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Watch
+          </a>
+          <!-- <div class="container-fluid">
+            <div class="row">
+              <div class="col-3">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="./src/product-4.jpg"
+                    class="card-img-top"
+                    alt="Watch 1"
+                  />
+                  <div class="card-body">
+                    <a href="#" class="btn btn-primary">Watch 1</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="./src/product-4.jpg"
+                    class="card-img-top"
+                    alt="Watch 1"
+                  />
+                  <div class="card-body">
+                    <a href="#" class="btn btn-primary">Watch 1</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="./src/product-4.jpg"
+                    class="card-img-top"
+                    alt="Watch 1"
+                  />
+                  <div class="card-body">
+                    <a href="#" class="btn btn-primary">Watch 1</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="./src/product-4.jpg"
+                    class="card-img-top"
+                    alt="Watch 1"
+                  />
+                  <div class="card-body">
+                    <a href="#" class="btn btn-primary">Watch 1</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div
+          class="col-1 border border-bottom-0 border-top-0 border-end-0 border-light"
+        >
+          Models
+        </div>
+        <div
+          class="col-1 border border-bottom-0 border-top-0 border-end-0 border-light"
+        >
+          Brands
+        </div>
+        <div
+          class="col-1 border border-bottom-0 border-top-0 border-end-0 border-light"
+        >
+          Material
+        </div>
+        <div
+          class="col-1 border border-bottom-0 border-top-0 border-end-0 border-light"
+        >
+          <a
+            class="dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Pages
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">about us</a></li>
+            <li><a class="dropdown-item" href="#">contact us</a></li>
+            <li><a class="dropdown-item" href="#">blog</a></li>
+            <li><a class="dropdown-item" href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- end nav bar -->
+
+    <!-- start slider -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active visually-hidden"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          class="visually-hidden"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="src/slider1.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block text-start">
+            <h1>The Watch Everyone desire</h1>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="src/slider2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block text-start">
+            <h1>AN EXTRAORDINARY CLASSIC</h1>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- end slider -->
+
+    <!-- best selling items -->
+
+    <div class="container-fluid min-vh-100" id="bestselling">
+      <div class="row h-100">
+        <div class="col-lg-6 m-0 p-0 h-100">
+          <div class="card text-bg-dark rounded-0 h-100">
+            <img
+              src="src/section 3 (3).jpg"
+              class="card-img h-100"
+              alt="Watch 1"
+            />
+            <div
+              class="card-img-overlay"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+              "
+            >
+              <h5 class="card-title">Time</h5>
+              <p class="card-text">Unique Watches from Classic Collections</p>
+              <p class="card-text">
+                <button type="button" class="btn btn-outline-light btn-lg">
+                  BUY NOW
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 m-0 p-0 h-100 rounded-0">
+          <div class="row h-50">
+            <div class="col-lg-6 p-0 h-100">
+              <div class="card text-bg-dark h-100 rounded-0">
+                <img
+                  src="src/section 3 (2).jpg"
+                  class="card-img h-100"
+                  alt="Watch 1"
+                />
+                <div
+                  class="card-img-overlay"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <h5 class="card-title">DITRACK</h5>
+                  <p class="card-text">Handsome Watches</p>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-outline-light btn-lg">
+                      BUY NOW
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 p-0 h-100">
+              <div class="card text-bg-dark h-100 rounded-0">
+                <img
+                  src="src/section 3 (1).jpg"
+                  class="card-img h-100"
+                  alt="Watch 1"
+                />
+                <div
+                  class="card-img-overlay"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <h5 class="card-title">SANTEX</h5>
+                  <p class="card-text">International Brand</p>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-outline-light btn-lg">
+                      BUY NOW
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row h-50">
+            <div class="col p-0 h-100">
+              <div class="card text-bg-dark h-100 rounded-0">
+                <img
+                  src="src/section 3 (1).jpg"
+                  class="card-img h-100"
+                  alt="Watch 1"
+                />
+                <div
+                  class="card-img-overlay"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    align-items: end;
+                  "
+                >
+                  <h5 class="card-title">GIZMO</h5>
+                  <p class="card-text">Classic Watch Collections</p>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-outline-light btn-lg">
+                      BUY NOW
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- best selling items -->
+
+    <!-- start shopping area -->
+
+    <div class="container-fluid mt-5 text-center">
+      <div class="row min-vh-10">
+        <div class="col-12">
+          <p>360° COLLECTION</p>
+          <p class="display-1">
+            <span style="color: #cbba9c"> FEATURED</span> PRODUCTS
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid text-center my-lg-5 max-vh-100 min-vh-100"
+      id="shoppingarea"
+    >
+      <div class="row justify-content-center">
+        <div
+          class="col-lg-3 mx-3 mb-lg-5 p-3 border-bottom border-warning-subtle"
+        >
+          <div class="card border-0">
+            <img src="src/product (3).jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Tommy Bahama</p>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span class="text-start">******</span>
+              <span class="text-end">1000$</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-3 mx-lg-3 mb-lg-5 p-3 border-bottom border-warning-subtle"
+        >
+          <div class="card border-0">
+            <img src="src/product (2).jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Tommy Bahama</p>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span class="text-start">******</span>
+              <span class="text-end">1000$</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-3 mx-lg-3 mb-lg-5 p-3 border-bottom border-warning-subtle"
+        >
+          <div class="card border-0">
+            <img src="src/product (4).jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Tommy Bahama</p>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span class="text-start">******</span>
+              <span class="text-end">1000$</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 mx-lg-3p-3 border-bottom border-warning-subtle">
+          <div class="card border-0">
+            <img src="src/product (5).jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Tommy Bahama</p>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span class="text-start">******</span>
+              <span class="text-end">1000$</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 mx-lg-3 p-3 border-bottom border-warning-subtle">
+          <div class="card border-0">
+            <img src="src/product (6).jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Tommy Bahama</p>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span class="text-start">******</span>
+              <span class="text-end">1000$</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 mx-lg-3p-3 border-bottom border-warning-subtle">
+          <div class="card border-0">
+            <img src="src/product (2).jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Tommy Bahama</p>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span class="text-start">******</span>
+              <span class="text-end">1000$</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end shopping area -->
+
+    <!-- start offers -->
+
+    <div class="container-fluid text-center max-vh-25 min-vh-25 mt-5 h-100">
+      <div class="row">
+        <div class="col-12">
+          <p>A COMPANION FOR YOU</p>
+          <p class="display-1">
+            <span style="color: #cbba9c"> SPECIAL </span> EDITION
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg min-vh-100 max-vh-100">
+      <div class="card mb-3 border-0">
+        <div class="row g-0 justify-content-evenly">
+          <div class="col-md-5">
+            <img
+              src="./src/product (4).jpg"
+              class="img-fluid rounded-start h-80 border border-secondary-subtle"
+              alt="White Watch"
+            />
+          </div>
+          <div class="col-md-5">
+            <div class="card-body h-100 p-1">
+              <h5 class="card-title">Chronograph Watch</h5>
+              <h5 class="card-title">*******</h5>
+              <p class="card-text">
+                In daily life, watches are more significant. Watches are
+                available in a wide variety of styles for both men and women.
+                That makes it simple to see the time. Also,...
+              </p>
+              <div class="container h-75">
+                <div class="row" style="height: 12.5%">
+                  <div class="col-4">Price:</div>
+                  <div class="col-8">
+                    $36.38
+                    <span
+                      class="text-muted text-decoration-line-through"
+                      style="font-size: 80%"
+                      >$43.68</span
+                    >
+                  </div>
+                </div>
+                <div class="row" style="height: 12.5%">
+                  <div class="col-4">Size</div>
+                  <div class="col-8"></div>
+                </div>
+                <div class="row" style="height: 12.5%">
+                  <div class="col-4">Color</div>
+                  <div class="col-8"></div>
+                </div>
+                <div class="row" style="height: 12.5%">
+                  <div class="col-4">Material</div>
+                  <div class="col-8"></div>
+                </div>
+                <div class="row" style="height: 12.5%">
+                  <div class="col-4">Availability</div>
+                  <div class="col-8">9 In stock</div>
+                </div>
+                <div class="row" style="height: 12.5%">
+                  <div class="col-4">Quantity</div>
+                  <div class="col-8"></div>
+                </div>
+                <div class="row" style="height: 12.5%">
+                  <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">
+                      Secondary
+                    </button>
+                  </div>
+                  <div class="col-8">
+                    <button type="button" class="btn btn-outline-secondary">
+                      Secondary
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end offers -->
+
+    <!-- start catalog -->
+
+    <div class=".container">
+      <div class="row justify-content-evenly">
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./src/catalog (1).jpg" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <p>
+                <a
+                  href="#"
+                  class="text-decoration-none"
+                  style="color: #ad9160; font-size: 80%"
+                  >Chronograph 100M</a
+                >
+              </p>
+              <p class="card-text">Timers Villa</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./src/catalog (2).jpg" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <p>
+                <a
+                  href="#"
+                  class="text-decoration-none"
+                  style="color: #ad9160; font-size: 80%"
+                  >Men's Maiden</a
+                >
+              </p>
+              <p class="card-text">A Friend of a Man</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./src/catalog (3).jpg" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <p>
+                <a
+                  href="#"
+                  class="text-decoration-none"
+                  style="color: #ad9160; font-size: 80%"
+                  >Thin Deal</a
+                >
+              </p>
+              <p class="card-text">Complete Mechanical</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end catalog -->
+
+    <!-- start Collections -->
+
+    <div class="container-fluid text-center max-vh-25 min-vh-25 mt-5 h-100">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <p>
+            A VARIETY OF
+            <span class="border-bottom pb-3 border-dark"> 300+</span> COLLECTION
+          </p>
+          <p class="display-1">
+            <span style="color: #cbba9c"> CHOOSE A </span> DIAL
+          </p>
+          <p>
+            This Is The Best In Class Effective Watches From The Luxury Brand
+            Watch.Co And Gizmo. Lot Of Efforts. Take A Peek Look Into It.
+          </p>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+
+    <!-- end Collections -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

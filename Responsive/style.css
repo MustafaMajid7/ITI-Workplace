@@ -1,0 +1,57 @@
+.offcanvas-top{
+    height: 150px !important;
+}
+.offcanvas-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#categories{
+    height: 60px;
+    background-color: black;
+    color: white;
+}
+#categories{
+    width: 100% !important;
+}
+.dropdown-toggle:visited , .dropdown-toggle:hover , .dropdown-toggle {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* start slider */
+.carousel-control-next{
+    display: flex;
+    justify-content: end;
+}
+
+.carousel-control-prev{
+    display: flex;
+    justify-content: start;
+}
+.carousel-caption{
+    top: 40%;
+    width: 400px;
+}
+.second_slide{
+    right: 0px;
+    width: 800px;
+}
+/* end slider */
+
+/* start best selling */
+
+#bestselling{
+    height: 1vh;
+}
+
+/* end best selling */
+
+/* end shopping area  */
+
+
+
+
+/* end shopping area  */
+
