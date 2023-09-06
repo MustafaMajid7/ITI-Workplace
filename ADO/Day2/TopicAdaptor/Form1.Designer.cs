@@ -37,6 +37,7 @@
             label1 = new Label();
             txt_TopicName = new TextBox();
             dgv_topic = new DataGridView();
+            btn_saveChanges = new Button();
             ((System.ComponentModel.ISupportInitialize)nud_topicID).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgv_topic).BeginInit();
             SuspendLayout();
@@ -77,6 +78,7 @@
             btn_delete.TabIndex = 11;
             btn_delete.Text = "Delete";
             btn_delete.UseVisualStyleBackColor = true;
+            btn_delete.Click += btn_delete_Click;
             // 
             // btn_add
             // 
@@ -86,6 +88,7 @@
             btn_add.TabIndex = 12;
             btn_add.Text = "Add";
             btn_add.UseVisualStyleBackColor = true;
+            btn_add.Click += btn_add_Click;
             // 
             // label2
             // 
@@ -124,11 +127,22 @@
             dgv_topic.TabIndex = 5;
             dgv_topic.RowHeaderMouseDoubleClick += dgv_topic_RowHeaderMouseDoubleClick_1;
             // 
+            // btn_saveChanges
+            // 
+            btn_saveChanges.Location = new Point(553, 159);
+            btn_saveChanges.Name = "btn_saveChanges";
+            btn_saveChanges.Size = new Size(115, 23);
+            btn_saveChanges.TabIndex = 14;
+            btn_saveChanges.Text = "Save Changes";
+            btn_saveChanges.UseVisualStyleBackColor = true;
+            btn_saveChanges.Click += btn_saveChanges_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn_saveChanges);
             Controls.Add(nud_topicID);
             Controls.Add(btn_update);
             Controls.Add(btn_show);
@@ -158,5 +172,6 @@
         private Label label1;
         private TextBox txt_TopicName;
         private DataGridView dgv_topic;
+        private Button btn_saveChanges;
     }
 }

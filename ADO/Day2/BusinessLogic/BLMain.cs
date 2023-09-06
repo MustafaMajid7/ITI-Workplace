@@ -10,6 +10,12 @@ namespace BusinessLogic
 
         //getAll
 
+        public DataTable getTopicsV2()
+        {
+            string command = "select * from Topic";
+
+            return model.queryFunc(command);
+        }
         public List<Topic> getTopics()
         {
             string cmd = "select * from Topic";
@@ -95,16 +101,38 @@ namespace BusinessLogic
 
         //addV2
 
-        public void addTopicV2(string name, int id)
+        public List<BusinessLogic.Topic> addTopicV2(List<BusinessLogic.Topic> list_of_topics, string name, int id)
         {
+            int index = 0;
+            foreach (Topic tp in list_of_topics)
+            {
+                if (tp.Id == id)
+                    break;
+                index++;
+            }
+            list_of_topics.Add(new Topic() { Id = id, Name = name });
 
+            return list_of_topics;
         }
 
         //deleteV2
 
-        public void deleteTopicV2(string name, int id)
+        public List<BusinessLogic.Topic> deleteTopicV2(List<BusinessLogic.Topic> list_of_topics, string name, int id)
         {
+            int index = 0;
+            foreach (Topic tp in list_of_topics)
+            {
+                if (tp.Id == id)
+                    break;
+                index++;
+            }
+            list_of_topics.RemoveAt(index);
 
+            return list_of_topics;
+        }
+        public void SaveChanges(DataTable dataTable)
+        {
+            model.adaptorUpdate(dataTable);
         }
     }
 }

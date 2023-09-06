@@ -55,3 +55,20 @@
 
 /* end shopping area  */
 
+/* start shopping area */
+
+#collections{
+    height: 40vh;
+}
+
+/* end shopping area */
+
+input{
+    border: 0px;
+    padding: 10px;
+    width: 80%;
+}
+input::placeholder{
+    color: #C8C8C8;
+    font-size: 16px;
+}
