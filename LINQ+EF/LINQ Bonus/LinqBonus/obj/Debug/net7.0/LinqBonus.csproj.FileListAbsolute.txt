@@ -1,0 +1,14 @@
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\bin\Debug\net7.0\LinqBonus.exe
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\bin\Debug\net7.0\LinqBonus.deps.json
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\bin\Debug\net7.0\LinqBonus.runtimeconfig.json
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\bin\Debug\net7.0\LinqBonus.dll
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\bin\Debug\net7.0\LinqBonus.pdb
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\obj\Debug\net7.0\LinqBonus.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\obj\Debug\net7.0\LinqBonus.AssemblyInfoInputs.cache
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\obj\Debug\net7.0\LinqBonus.AssemblyInfo.cs
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\obj\Debug\net7.0\LinqBonus.csproj.CoreCompileInputs.cache
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\obj\Debug\net7.0\LinqBonus.dll
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\obj\Debug\net7.0\refint\LinqBonus.dll
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\obj\Debug\net7.0\LinqBonus.pdb
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\obj\Debug\net7.0\LinqBonus.genruntimeconfig.cache
+E:\ITI\workplace\LINQ+EF\LINQ Bonus\LinqBonus\obj\Debug\net7.0\ref\LinqBonus.dll
