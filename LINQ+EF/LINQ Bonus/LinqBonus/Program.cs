@@ -642,21 +642,29 @@ namespace LinqBonus
 
             //---------------------------------------------------------------------------------------
 
+            var groups = (from cat in ListGenerators.ProductList
+                          group cat by cat.Category into grouped
+                          where grouped.Any(x=>x.UnitsInStock==0)
+                          select grouped).Distinct();
 
-            //var groups = (from cat in ListGenerators.ProductList.GroupBy(x => x.Category)
-            //              from prd in cat
-            //              where prd.UnitsInStock == 0
-            //              select cat).Distinct();
-
-
-
-            //foreach (var item in groups)
-            //{
-            //    Console.WriteLine(item.Key);
+            foreach (var item in groups)
+            {
+                Console.WriteLine(item.Key);
+            }
 
             //---------------------------------------------------------------------------------------
 
+            Console.WriteLine("-----------------------------------------------------");
 
+            var groups2 = (from cat in ListGenerators.ProductList
+                          group cat by cat.Category into grouped
+                          where grouped.All(x => x.UnitsInStock > 0)
+                          select grouped).Distinct();
+
+            foreach (var item in groups2)
+            {
+                Console.WriteLine(item.Key);
+            }
 
             #endregion
 
@@ -687,22 +695,22 @@ namespace LinqBonus
 
             //---------------------------------------------------------------------------------------
 
-            string[] Arr = { "from   ", " salt", " earn ", "  last   ", " near ", " form  " };
+            //string[] Arr = { "from   ", " salt", " earn ", "  last   ", " near ", " form  " };
 
-            var orderGroups = Arr.GroupBy(
-                        w => w.Trim(),
-                        new CustomComparer()
-                        );
+            //var orderGroups = Arr.GroupBy(
+            //            w => w.Trim(),
+            //            new CustomComparer()
+            //            );
 
-            foreach (var v in orderGroups) { 
-            
-                Console.WriteLine("...");
-                foreach (var item in v)
-                {
-                    Console.WriteLine(item.Trim());
-                }
+            //foreach (var v in orderGroups) { 
 
-            }
+            //    Console.WriteLine("...");
+            //    foreach (var item in v)
+            //    {
+            //        Console.WriteLine(item.Trim());
+            //    }
+
+            //}
 
             #endregion
 
