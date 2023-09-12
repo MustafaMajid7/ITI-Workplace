@@ -1,0 +1,15 @@
+﻿<table class="table table-bordered">
+	<tr>
+		<th>name</th>
+		<th>price</th>
+		<th>Others</th>
+	</tr>
+	@foreach(Product p in Model)
+	{
+	<tr>
+			<td>@p.name</td>
+			<td>@p.price</td>
+			<td><a href="/products/detailedProduct?id=@p.id">More Deatils</a></td>
+	</tr>
+	}
+</table>

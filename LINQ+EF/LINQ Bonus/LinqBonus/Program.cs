@@ -642,29 +642,27 @@ namespace LinqBonus
 
             //---------------------------------------------------------------------------------------
 
-            var groups = (from cat in ListGenerators.ProductList
-                          group cat by cat.Category into grouped
-                          where grouped.Any(x=>x.UnitsInStock==0)
-                          select grouped).Distinct();
+            //var groups = (from cat in ListGenerators.ProductList
+            //              group cat by cat.Category into grouped
+            //              where grouped.Any(x=>x.UnitsInStock==0)
+            //              select grouped).Distinct();
 
-            foreach (var item in groups)
-            {
-                Console.WriteLine(item.Key);
-            }
+            //foreach (var item in groups)
+            //{
+            //    Console.WriteLine(item.Key);
+            //}
 
             //---------------------------------------------------------------------------------------
 
-            Console.WriteLine("-----------------------------------------------------");
+            //var groups2 = (from cat in ListGenerators.ProductList
+            //              group cat by cat.Category into grouped
+            //              where grouped.All(x => x.UnitsInStock > 0)
+            //              select grouped).Distinct();
 
-            var groups2 = (from cat in ListGenerators.ProductList
-                          group cat by cat.Category into grouped
-                          where grouped.All(x => x.UnitsInStock > 0)
-                          select grouped).Distinct();
-
-            foreach (var item in groups2)
-            {
-                Console.WriteLine(item.Key);
-            }
+            //foreach (var item in groups2)
+            //{
+            //    Console.WriteLine(item.Key);
+            //}
 
             #endregion
 

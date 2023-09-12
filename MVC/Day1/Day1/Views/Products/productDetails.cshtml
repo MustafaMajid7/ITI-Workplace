@@ -1,0 +1,18 @@
+﻿
+<table class="table table-bordered text-center">
+	<tr>
+		<th>name</th>
+		<th>price</th>
+		<th>Description</th>
+		<th>Product</th>
+	</tr>
+		<tr>
+			<td>@Model.name</td>
+			<td>@Model.price</td>
+			<td>@Model.desc</td>
+			<td><img src="/src/@Model.imgURL" style="width:100px;height:100px"></td>
+		</tr>
+		<tr>
+		<td colspan="4"><a href="/products/ShowProducts">Return to Home</a></td>
+		</tr>
+</table>

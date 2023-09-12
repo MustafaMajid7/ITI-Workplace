@@ -1,0 +1,27 @@
+﻿@model Instructor
+<table class="table table-bordered text-center">
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>IMG</th>
+		<th>Salary</th>
+		<th>Adress</th>
+		<th>Department</th>
+		<th>Course</th>
+	</tr>
+	
+		<tr>
+			<td>@Model.id</td>
+			<td>@Model.name</td>
+			<td><img src="/src/@Model.img" style="width:100px;height:100px" /></td>
+			<td>@Model.salary</td>
+			<td>@Model.address</td>
+			<td>@ViewData["department"]</td>
+			<td>@ViewData["course"]</td>
+	</tr>
+	<tr>
+		<td colspan="7"><a href="/instructor/index"> Go Back</a></td>
+	</tr>
+	
+</table>
+
