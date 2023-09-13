@@ -40,6 +40,9 @@
 			label5 = new Label();
 			label6 = new Label();
 			label7 = new Label();
+			btn_img = new Button();
+			OFD = new OpenFileDialog();
+			lbl_img = new Label();
 			((System.ComponentModel.ISupportInitialize)nud_age).BeginInit();
 			SuspendLayout();
 			// 
@@ -48,7 +51,7 @@
 			btn_Register.BackColor = SystemColors.ActiveCaption;
 			btn_Register.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
 			btn_Register.ForeColor = Color.Black;
-			btn_Register.Location = new Point(337, 128);
+			btn_Register.Location = new Point(357, 128);
 			btn_Register.Name = "btn_Register";
 			btn_Register.Size = new Size(154, 46);
 			btn_Register.TabIndex = 5;
@@ -146,17 +149,41 @@
 			label7.AutoSize = true;
 			label7.BackColor = Color.Firebrick;
 			label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label7.Location = new Point(555, 139);
+			label7.Location = new Point(578, 142);
 			label7.Name = "label7";
 			label7.Size = new Size(130, 21);
 			label7.TabIndex = 1;
 			label7.Text = "* means required";
+			// 
+			// btn_img
+			// 
+			btn_img.Location = new Point(182, 138);
+			btn_img.Name = "btn_img";
+			btn_img.Size = new Size(122, 32);
+			btn_img.TabIndex = 7;
+			btn_img.Text = "Get Image";
+			btn_img.UseVisualStyleBackColor = true;
+			btn_img.Click += btn_img_Click;
+			// 
+			// OFD
+			// 
+			OFD.FileName = "openFileDialog1";
+			// 
+			// lbl_img
+			// 
+			lbl_img.AutoSize = true;
+			lbl_img.Location = new Point(218, 173);
+			lbl_img.Name = "lbl_img";
+			lbl_img.Size = new Size(0, 15);
+			lbl_img.TabIndex = 8;
 			// 
 			// Register
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
+			Controls.Add(lbl_img);
+			Controls.Add(btn_img);
 			Controls.Add(label6);
 			Controls.Add(label5);
 			Controls.Add(txt_userName);
@@ -190,5 +217,8 @@
 		private Label label5;
 		private Label label6;
 		private Label label7;
+		private Button btn_img;
+		private OpenFileDialog OFD;
+		private Label lbl_img;
 	}
 }

@@ -19,7 +19,7 @@ namespace EFD2
 		public string? breif { get; set; }
 
 		[StringLength(50)]
-		public string? desc { get; set; }
+		public string desc { get; set; }
 
 		[Column(TypeName = "date")]
 		public DateTime? date { get; set; }
@@ -27,7 +27,7 @@ namespace EFD2
 		public TimeSpan? time { get; set; }
 
 		[ForeignKey("Author")]
-        public int? AuthorID { get; set; }
+        public int AuthorID { get; set; }
         public virtual Author Author { get; set; }
 
         [ForeignKey("Catalog")]

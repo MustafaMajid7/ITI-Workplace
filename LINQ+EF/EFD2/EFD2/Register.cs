@@ -22,10 +22,10 @@ namespace EFD2
 		{
 			using (dbContext = new dbContext())
 			{
-			var username = txt_userName.Text;
-			var password = txt_password.Text;
-			var email = txt_email.Text;
-			var age = nud_age.Value;
+				var username = txt_userName.Text;
+				var password = txt_password.Text;
+				var email = txt_email.Text;
+				var age = nud_age.Value;
 
 				if (txt_userName.Text == "" || txt_password.Text == "")
 					MessageBox.Show($"username and password must have values");
@@ -39,9 +39,11 @@ namespace EFD2
 							username = txt_userName.Text,
 							password = txt_password.Text,
 							email = txt_email.Text,
-							age = (int)nud_age.Value
+							age = (int)nud_age.Value,
+							img = Path.GetFileName(OFD.FileName)
 						});
 						dbContext.SaveChanges();
+						MessageBox.Show("successfully saved");
 						Application.OpenForms[0].Show();
 						this.Close();
 					}
@@ -50,6 +52,13 @@ namespace EFD2
 				}
 			}
 
+		}
+
+		private void btn_img_Click(object sender, EventArgs e)
+		{
+			OFD.Filter = "Images|*.png;*.jpg;*.jpeg";
+			OFD.ShowDialog();
+			lbl_img.Text = "Done";
 		}
 	}
 }

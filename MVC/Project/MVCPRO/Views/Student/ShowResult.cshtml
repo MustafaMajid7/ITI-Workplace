@@ -1,0 +1,21 @@
+﻿@model List<studentResultCourseColor>
+
+<table class="table table-bordered">
+	@Model
+	<tr>
+		<th>Student ID</th>
+		<th>Student Name</th>
+		<th>Degree</th>
+		<th>Course Name</th>
+	</tr>
+	@foreach(var item in Model)
+	{
+		<tr style="background-color:@item.color">
+			<td>@item.st_id</td>
+			<td>@item.st_name</td>
+			<td>@item.degree</td>
+			<td>@item.crs_name</td>
+		</tr>
+	}
+
+</table>

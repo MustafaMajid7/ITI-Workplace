@@ -59,3 +59,8 @@ E:\ITI\workplace\LINQ+EF\EFD2\EFD2\obj\Debug\net7.0-windows\EFD2.genruntimeconfi
 E:\ITI\workplace\LINQ+EF\EFD2\EFD2\obj\Debug\net7.0-windows\ref\EFD2.dll
 E:\ITI\workplace\LINQ+EF\EFD2\EFD2\obj\Debug\net7.0-windows\EFD2.Login.resources
 E:\ITI\workplace\LINQ+EF\EFD2\EFD2\obj\Debug\net7.0-windows\EFD2.Register.resources
+E:\ITI\workplace\LINQ+EF\EFD2\EFD2\obj\Debug\net7.0-windows\EFD2.Home.resources
+E:\ITI\workplace\LINQ+EF\EFD2\EFD2\obj\Debug\net7.0-windows\EFD2.AddPost.resources
+E:\ITI\workplace\LINQ+EF\EFD2\EFD2\obj\Debug\net7.0-windows\EFD2.Profile.resources
+E:\ITI\workplace\LINQ+EF\EFD2\EFD2\obj\Debug\net7.0-windows\EFD2.CatalogForm.resources
+E:\ITI\workplace\LINQ+EF\EFD2\EFD2\obj\Debug\net7.0-windows\EFD2.Properties.Resources.resources

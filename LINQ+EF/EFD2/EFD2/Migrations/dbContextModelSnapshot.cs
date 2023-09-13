@@ -40,6 +40,10 @@ namespace EFD2.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("img")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("password")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -85,8 +89,7 @@ namespace EFD2.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<int?>("AuthorID")
-                        .IsRequired()
+                    b.Property<int>("AuthorID")
                         .HasColumnType("int");
 
                     b.Property<int?>("CatID")
@@ -100,6 +103,7 @@ namespace EFD2.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("desc")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 

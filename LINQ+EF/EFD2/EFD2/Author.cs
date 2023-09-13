@@ -21,7 +21,10 @@ namespace EFD2
 		public string? email { get; set; }
         public int? age { get; set; }
 
-        public virtual List<Post> posts { get; set; } = new List<Post>();
+		[StringLength(50)]
+		public string? img { get; set; }
+
+		public virtual List<Post> posts { get; set; } = new List<Post>();
 
     }
 }

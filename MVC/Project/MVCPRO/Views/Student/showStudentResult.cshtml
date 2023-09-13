@@ -1,0 +1,18 @@
+﻿@model studentResultCourseColor
+
+<table class="table table-bordered">
+	<tr>
+		<th>Student ID</th>
+		<th>Student Name</th>
+		<th>Degree</th>
+		<th>Course Name</th>
+	</tr>
+	<tr style="background-color:@Model.color" >
+		<td>@Model.st_id</td>
+		<td>@Model.st_name</td>
+		<td>@Model.degree</td>
+		<td>@Model.crs_name</td>
+	</tr>
+
+</table>
+
