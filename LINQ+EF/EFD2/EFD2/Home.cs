@@ -15,7 +15,7 @@ namespace EFD2
 	{
 		dbContext dbContext;
 		int id;
-		string imgpath = "E:\\ITI\\workplace\\LINQ+EF\\EFD2\\EFD2\\src\\";
+		string imgpath = @"E:\\ITI\\workplace\\LINQ+EF\\EFD2\\src\\";
 		public Home()
 		{
 			InitializeComponent();
@@ -28,7 +28,7 @@ namespace EFD2
 			this.id = id;
 			Author author = dbContext.Authors.Where(x => x.id == id).FirstOrDefault();
 			lbl_user.Text = "Hello " + author.username;
-			string image = imgpath + author.img;
+			string image = imgpath + author.username + ".jpg";
 			Bitmap bm = new Bitmap(image);
 			PB_user.Image = bm;
 		}
@@ -66,6 +66,11 @@ namespace EFD2
 		private void dgv_posts_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
 			DataGridViewRow dr = dgv_posts.Rows[e.RowIndex];
+		}
+
+		private void btn_exit_Click(object sender, EventArgs e)
+		{
+			Application.OpenForms[0].Close();
 		}
 	}
 }

@@ -87,5 +87,10 @@ namespace EFD2
 			else
 				MessageBox.Show("you must enter username and password");
 		}
+
+		private void btn_exit_Click(object sender, EventArgs e)
+		{
+			Application.OpenForms[0].Close();
+		}
 	}
 }

@@ -37,6 +37,7 @@
 			btn_editProfile = new Button();
 			btn_chgpass = new Button();
 			pictureBox1 = new PictureBox();
+			btn_exit = new Button();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
 			// 
@@ -123,11 +124,23 @@
 			pictureBox1.TabIndex = 8;
 			pictureBox1.TabStop = false;
 			// 
+			// btn_exit
+			// 
+			btn_exit.BackColor = Color.Red;
+			btn_exit.Location = new Point(356, 281);
+			btn_exit.Name = "btn_exit";
+			btn_exit.Size = new Size(77, 43);
+			btn_exit.TabIndex = 9;
+			btn_exit.Text = "Exit";
+			btn_exit.UseVisualStyleBackColor = false;
+			btn_exit.Click += btn_exit_Click;
+			// 
 			// Login
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 355);
+			Controls.Add(btn_exit);
 			Controls.Add(pictureBox1);
 			Controls.Add(btn_chgpass);
 			Controls.Add(btn_editProfile);
@@ -156,5 +169,6 @@
 		private Button btn_editProfile;
 		private Button btn_chgpass;
 		private PictureBox pictureBox1;
+		private Button btn_exit;
 	}
 }

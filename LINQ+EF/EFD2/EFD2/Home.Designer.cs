@@ -36,10 +36,9 @@
 			btn_addCat = new Button();
 			btn_showCat = new Button();
 			PB_user = new PictureBox();
-			PB_catalog = new PictureBox();
+			btn_exit = new Button();
 			((System.ComponentModel.ISupportInitialize)dgv_posts).BeginInit();
 			((System.ComponentModel.ISupportInitialize)PB_user).BeginInit();
-			((System.ComponentModel.ISupportInitialize)PB_catalog).BeginInit();
 			SuspendLayout();
 			// 
 			// dgv_posts
@@ -112,26 +111,29 @@
 			// 
 			// PB_user
 			// 
-			PB_user.Location = new Point(581, 17);
+			PB_user.Location = new Point(557, 17);
 			PB_user.Name = "PB_user";
-			PB_user.Size = new Size(203, 125);
+			PB_user.Size = new Size(227, 208);
 			PB_user.TabIndex = 4;
 			PB_user.TabStop = false;
 			// 
-			// PB_catalog
+			// btn_exit
 			// 
-			PB_catalog.Location = new Point(581, 184);
-			PB_catalog.Name = "PB_catalog";
-			PB_catalog.Size = new Size(203, 125);
-			PB_catalog.TabIndex = 4;
-			PB_catalog.TabStop = false;
+			btn_exit.BackColor = Color.Red;
+			btn_exit.Location = new Point(491, 266);
+			btn_exit.Name = "btn_exit";
+			btn_exit.Size = new Size(77, 43);
+			btn_exit.TabIndex = 10;
+			btn_exit.Text = "Exit";
+			btn_exit.UseVisualStyleBackColor = false;
+			btn_exit.Click += btn_exit_Click;
 			// 
 			// Home
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 329);
-			Controls.Add(PB_catalog);
+			Controls.Add(btn_exit);
 			Controls.Add(PB_user);
 			Controls.Add(btn_addCat);
 			Controls.Add(btn_showCat);
@@ -144,7 +146,6 @@
 			Text = "Home";
 			((System.ComponentModel.ISupportInitialize)dgv_posts).EndInit();
 			((System.ComponentModel.ISupportInitialize)PB_user).EndInit();
-			((System.ComponentModel.ISupportInitialize)PB_catalog).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -159,6 +160,6 @@
 		private Button btn_addCat;
 		private Button btn_showCat;
 		private PictureBox PB_user;
-		private PictureBox PB_catalog;
+		private Button btn_exit;
 	}
 }

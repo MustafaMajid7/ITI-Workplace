@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,8 +58,14 @@ namespace EFD2
 		private void btn_img_Click(object sender, EventArgs e)
 		{
 			OFD.Filter = "Images|*.png;*.jpg;*.jpeg";
-			OFD.ShowDialog();
-			lbl_img.Text = "Done";
+			if (OFD.ShowDialog() == DialogResult.OK) 
+			{
+				lbl_img.Text = "Done";
+				Bitmap bt = new Bitmap(OFD.FileName);
+				bt.Save(@"E:\ITI\workplace\LINQ+EF\EFD2\src\"+txt_userName.Text+ ".jpg");
+			}
+			else
+				lbl_img.Text = "No image selected";
 		}
 	}
 }
