@@ -24,12 +24,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/workplace/MVC/Project/MVCPRO/Views/Instructor/allDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxhbGxEZXRhaWxzLmNzaHRtbA==
+[E:/ITI/workplace/MVC/Project/MVCPRO/Views/Instructor/editInstructor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxlZGl0SW5zdHJ1Y3Rvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/workplace/MVC/Project/MVCPRO/Views/Instructor/allInstructors.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxhbGxJbnN0cnVjdG9ycy5jc2h0bWw=
+[E:/ITI/workplace/MVC/Project/MVCPRO/Views/Instructor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ITI/workplace/MVC/Project/MVCPRO/Views/Instructor/newInstructor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxuZXdJbnN0cnVjdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ITI/workplace/MVC/Project/MVCPRO/Views/Instructor/showDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxzaG93RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/ITI/workplace/MVC/Project/MVCPRO/Views/Shared/Error.cshtml]

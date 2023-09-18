@@ -1,0 +1,23 @@
+﻿@model List<Instructor>
+<table class="table table-bordered text-center">
+	<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>img</th>
+			<th>Edit Profile</th>
+			<th>More Info</th>
+	</tr>
+	@foreach (Instructor ins in Model)
+	{
+		<tr>
+				<td>@ins.id</td>
+				<td>@ins.name</td>
+				<td><img src="/src/@ins.img" style="width:100px;height:100px"/></td>
+				<td><a href="/instructor/editInstructor/@ins.id">Edit</a></td>
+				<td><a href="/instructor/showdetails/@ins.id">More Details</a></td>
+		</tr>
+	}
+</table>
+
+<a href="/instructor/newInstructor" class="btn btn-success d-block m-auto"> Add Instructor </a>
+

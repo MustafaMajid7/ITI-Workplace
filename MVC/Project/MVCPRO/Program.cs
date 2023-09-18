@@ -24,7 +24,7 @@ namespace MVCPRO
 
 			app.MapControllerRoute(
 				name: "default",
-				pattern: "{controller=Home}/{action=Index}/{id?}");
+				pattern: "{controller=Instructor}/{action=Index}/{id?}");
 
 			app.Run();
 		}
