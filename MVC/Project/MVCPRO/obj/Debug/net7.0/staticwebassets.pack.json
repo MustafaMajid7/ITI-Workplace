@@ -5,12 +5,44 @@
       "PackagePath": "staticwebassets\\MVCPRO.bundle.scp.css"
     },
     {
+      "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\assets\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\assets\\img\\bg-masthead.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg-masthead.jpg"
+    },
+    {
+      "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\assets\\img\\bg-signup.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg-signup.jpg"
+    },
+    {
+      "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\assets\\img\\demo-image-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\demo-image-01.jpg"
+    },
+    {
+      "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\assets\\img\\demo-image-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\demo-image-02.jpg"
+    },
+    {
+      "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\assets\\img\\ipad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\ipad.png"
+    },
+    {
       "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
       "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {
       "Id": "E:\\ITI\\workplace\\MVC\\Project\\MVCPRO\\wwwroot\\js\\site.js",

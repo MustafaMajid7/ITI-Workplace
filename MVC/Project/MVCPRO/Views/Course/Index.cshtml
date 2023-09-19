@@ -1,0 +1,30 @@
+﻿@model List<Course>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "_CustomizedLayout";
+}
+
+<table class="table table-bordered text-center">
+	<tr>
+		<th>id</th>
+		<th>name</th>
+		<th>Degree</th>
+		<th>Min Degree</th>
+		<th>Department</th>
+	</tr>
+	@foreach (var crs in Model)
+	{
+		<tr>
+			<td>@crs.id</td>
+			<td>@crs.name</td>
+			<td>@crs.degree</td>
+			<td>@crs.Mindegree</td>
+			<td>@crs.department.name</td>
+		</tr>
+	}
+</table>
+
+<a asp-action="NewCourse" class="btn btn-success d-block m-auto"> Add Course </a>
+
+
+

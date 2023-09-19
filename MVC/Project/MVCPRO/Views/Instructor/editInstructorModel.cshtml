@@ -1,0 +1,64 @@
+﻿@model departmentsCoursesModel
+
+@{
+    ViewData["Title"] = "editInstructorModel";
+}
+
+<form action="/instructor/confirmEditing/@Model.Instructor?.id" method="post">
+	<div>
+		<label>Name</label>
+		<input type="text" name="name" id="name" value="@Model.Instructor?.name" class="form-control" />
+	</div>
+	<div>
+		<label>Salary</label>
+		<input type="number" name="salary" id="salary" value="@Model.Instructor?.salary" class="form-control" />
+	</div>
+	<div>
+		<label>Address</label>
+		<input type="address" name="address" id="address" value="@Model.Instructor?.address" class="form-control" />
+
+	</div>
+	<div>
+		<label>Image</label>
+		<input disabled type="image" src="/src/@Model.Instructor?.img" width="100px" height="100px" />
+		<input type="text" name="img" id="img" value="@Model.Instructor?.img" class="form-control" hidden />
+	</div>
+	<div>
+		<label>Departments</label>
+		<select class="form-control" name="dept_id">
+			@foreach (var item in Model.departments)
+			{
+				if (Model.Instructor?.dept_id == item.Value)
+				{
+					<option value="@item.Value" selected>@item.Key</option>
+				}
+				else
+				{
+					<option value="@item.Value">@item.Key</option>
+				}
+			}
+		</select>
+	</div>
+	<div>
+		<label>Courses</label>
+		<select class="form-control" name="crs_id">
+			@foreach (var item in Model.courses)
+			{
+				if (Model.Instructor?.crs_id == item.Value)
+				{
+					<option value="@item.Value" selected>@item.Key</option>
+				}
+				else
+				{
+					<option value="@item.Value">@item.Key</option>
+				}
+			}
+		</select>
+	</div>
+	<input type="submit" value="Confirm" class="btn btn-primary d-block w-100" style="margin:10px auto" />
+</form>
+
+<a href="/" class="btn btn-warning d-block m-auto"> Go Back</a>
+
+
+

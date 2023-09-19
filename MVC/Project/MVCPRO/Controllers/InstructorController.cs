@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVCPRO.Models;
+using MVCPRO.VwModels;
 
 namespace MVCPRO.Controllers
 {
@@ -26,13 +27,7 @@ namespace MVCPRO.Controllers
 		}
 		public IActionResult confirmEditing(Instructor instructor)
 		{
-			Instructor oldIns = InstituteCTX.Instructors.Where(x => x.id == instructor.id).FirstOrDefault();
-			oldIns.name = instructor.name;
-			oldIns.salary = instructor.salary;
-			oldIns.address = instructor.address;
-			oldIns.dept_id = instructor.dept_id;
-			oldIns.crs_id = instructor.crs_id;
-			//InstituteCTX.Update(instructor);
+			InstituteCTX.Update(instructor);
 			InstituteCTX.SaveChanges();
 			return RedirectToAction("index");
 		}
@@ -41,6 +36,42 @@ namespace MVCPRO.Controllers
 			ViewBag.departments = InstituteCTX.Departments.ToList();
 			ViewBag.courses = InstituteCTX.Courses.ToList();
 			return View();
+		}
+
+		/// <summary>
+		/// sending old data of instructor by ViewModel instead of ViewData and ViewBag
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns></returns>
+		public IActionResult editInstructorModel(int id)
+		{
+			var modelData = new departmentsCoursesModel();
+
+			foreach (var item in InstituteCTX.Departments.ToList())
+				modelData.departments.Add(item.name, item.id);
+
+			foreach (var item in InstituteCTX.Courses.ToList())
+				modelData.courses.Add(item.name, item.id);
+			modelData.Instructor = InstituteCTX.Instructors.Where(x => x.id == id).FirstOrDefault();
+
+			return View(modelData);
+		}
+
+		/// <summary>
+		/// sending instructor by model instead of ViewData and ViewBag
+		/// </summary>
+		/// <returns></returns>
+		public IActionResult newInstructorModel()
+		{
+			var modelData = new departmentsCoursesModel();
+
+            foreach (var item in InstituteCTX.Departments.ToList())
+				modelData.departments.Add(item.name, item.id);
+
+			foreach (var item in InstituteCTX.Courses.ToList())
+				modelData.courses.Add(item.name, item.id);
+
+			return View("newInstructor",modelData);
 		}
 		public IActionResult ConfirmAdd(Instructor instructor)
 		{
