@@ -1,0 +1,39 @@
+﻿@model CourseModel
+
+@{
+    ViewData["Title"] = "EditCourse";
+    SelectList listItems = new SelectList(Model.departments, "id", "name",Model.depID);
+}
+
+<form method="post" asp-action="EditCourse">
+
+    <div>
+        <label asp-for="name"></label>
+        <input asp-for="name" class="form-control" />
+        <span asp-validation-for="name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="degree"></label>
+        <input asp-for="degree" class="form-control" />
+        <span asp-validation-for="degree" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="mindegree"></label>
+        <input asp-for="mindegree" class="form-control" />
+        <span asp-validation-for="mindegree" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="departments"></label>
+        <select asp-items="listItems" asp-for="depID" class="form-control"></select>
+    </div>
+    <input type="submit" class="btn btn-primary d-block" style="width:100%;margin:10px auto;" value="Edit Course" />
+</form>
+
+<a asp-action="index" class="btn btn-success d-block m-auto"> Go Back </a>
+
+@section Scripts{
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

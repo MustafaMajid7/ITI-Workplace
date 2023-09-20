@@ -11,6 +11,7 @@
 		<th>Degree</th>
 		<th>Min Degree</th>
 		<th>Department</th>
+		<th>Others</th>
 	</tr>
 	@foreach (var crs in Model)
 	{
@@ -20,11 +21,16 @@
 			<td>@crs.degree</td>
 			<td>@crs.Mindegree</td>
 			<td>@crs.department.name</td>
+			<td>
+				<a asp-action="EditCourse" asp-route-id="@crs.id" asp-route-name="@crs.name" asp-route-degree="@crs.degree"
+				   asp-route-mindegree="@crs.Mindegree" asp-route-depID="@crs.dept_id" class="btn btn-success"> Edit </a>
+			</td>
 		</tr>
 	}
 </table>
 
 <a asp-action="NewCourse" class="btn btn-success d-block m-auto"> Add Course </a>
+
 
 
 
