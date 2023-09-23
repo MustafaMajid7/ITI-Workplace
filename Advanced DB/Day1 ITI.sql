@@ -36,7 +36,6 @@ from student s join Stud_Course sc
 on s.St_Id= sc.St_Id
 join Course c
 on sc.Crs_Id = c.Crs_Id
-where sc.Grade is not null
 
 ----------------------------------------- Query 6 -------------------------------------------
 
