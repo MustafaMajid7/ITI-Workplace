@@ -178,3 +178,6 @@ alter schema ITIStud transfer dbo.student
 alter schema ITIStud transfer dbo.course
 
 select * from itistud.Student
+
+delete from Student
+where Dept_Id = 10
