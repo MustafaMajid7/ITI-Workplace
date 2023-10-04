@@ -19,6 +19,8 @@
 		<input disabled type="image" src="/src/img.png" width="100px" height="100px" />
 		<input type="text" name="img" id="img" value="img.png" class="form-control" hidden />
 	</div>
+	
+	<!--
 	@* <div>
 		<label >Departments</label>
 		<select class="form-control" name="dept_id">
@@ -28,15 +30,19 @@
 			}
 		</select>
 	</div> *@
+	-->
+	
 	<div>
 		<label>Departments</label>
-		<select class="form-control" name="dept_id">
+		<select class="form-control" name="dept_id" id="depts" onchange="getempbydept()">
 			@foreach (var item in Model.departments)
 			{
 				<option value="@item.Value">@item.Key</option>
 			}
 		</select>
 	</div>
+	
+	<!--
 	@* <div>
 		<label>Courses</label>
 		<select class="form-control" name="crs_id">
@@ -46,16 +52,43 @@
 			}
 		</select>
 	</div> *@
+	-->
+	
 	<div>
-		<label>Departments</label>
-		<select class="form-control" name="dept_id">
-			@foreach (var item in Model.courses)
+		<label>Courses</label>
+		<select class="form-control" name="dept_id" id="crs_list">
+			@* @foreach (var item in Model.courses)
 			{
 				<option value="@item.Value">@item.Key</option>
-			}
+			} *@
 		</select>
 	</div>
+
 	<input type="submit" value="Confirm" class="btn btn-primary d-block w-100" style="margin:10px auto" />
 </form>
 
 <a href="/" class="btn btn-warning d-block m-auto"> Go Back</a>
+
+
+@section Scripts {
+	<script src="/lib/jquery/dist/jquery.min.js"></script>
+	<script>
+		function getempbydept() {
+		let id = document.getElementById("depts").value;
+
+			$.ajax(
+				{
+					url: "/Course/getcoursesbydeptid?DeptID=" + id,
+					success: (result) => {
+						document.getElementById("crs_list").innerHTML = "";
+
+						for (let item of result) {
+							document.getElementById("crs_list").innerHTML
+								+= "<option value=" + item.id + ">" + item.name + "</option>";
+						}
+
+					}
+				});
+		}
+	</script>
+}

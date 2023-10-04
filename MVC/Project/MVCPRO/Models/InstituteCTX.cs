@@ -8,7 +8,9 @@ namespace MVCPRO.Models
         {}
 		public InstituteCTX(DbContextOptions<InstituteCTX> options)
 		   : base(options)
-		{}
+		{
+			
+		}
 		public DbSet<Department> Departments{ get; set; }
         public DbSet<Trainee> Trainees{ get; set; }
         public DbSet<Instructor> Instructors{ get; set; }

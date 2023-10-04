@@ -23,7 +23,10 @@
     </div>
     <div>
         <label asp-for="dept_id"></label>
-        <select asp-items="departmentNames" asp-for="dept_id" class="form-control"></select>
+        <select asp-items="departmentNames" asp-for="dept_id" class="form-control">
+            <option value="0">--Select Department--</option>
+        </select>
+        <span asp-validation-for="dept_id" class="text-danger"></span>
     </div>
     <input type="submit" class="btn btn-primary d-block" style="width:100%;margin:10px auto;" value="Add Course" />
 </form>

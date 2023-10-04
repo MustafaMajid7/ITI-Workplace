@@ -30,6 +30,6 @@ namespace MVCPRO.Models
         [ForeignKey("department")]
 		[Display(Name = "Department Name")]
 		public int dept_id { get; set; }
-        public virtual Department? department { get; set; }
-    }
+		public virtual Department? department { get; set; }
+	}
 }

@@ -1,13 +1,31 @@
+using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
+using MVCPRO.Models;
+using MVCPRO.Repository.CourseRepository;
+using MVCPRO.Repository.DepartmentRepository;
+using NuGet.Protocol;
+
 namespace MVCPRO
 {
-	public class Program
+    public class Program
 	{
 		public static void Main(string[] args)
 		{
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
-			builder.Services.AddControllersWithViews();
+			builder.Services.AddControllersWithViews().AddJsonOptions(options=>
+			options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+			builder.Services.AddDbContext<InstituteCTX>(options =>
+			{
+				options.UseSqlServer(builder.Configuration.GetConnectionString("developmentConnectionString"));
+			});
+
+			builder.Services.AddSession();
+
+			builder.Services.AddScoped<ICourseRepository,CourseRepository>();
+			builder.Services.AddScoped<IDepartmentRepository,DepartmentRepository>();
 
 			var app = builder.Build();
 
@@ -19,6 +37,8 @@ namespace MVCPRO
 			app.UseStaticFiles();
 
 			app.UseRouting();
+
+			app.UseSession();
 
 			app.UseAuthorization();
 
