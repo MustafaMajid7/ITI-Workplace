@@ -1,0 +1,174 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#clipPath{
+    width: 100vw;
+    height: 400px;
+    background-color: #7777E9; 
+    clip-path: polygon(0% 0%,100% 0%,100% 75%,0% 100%);
+    transition: clip-path 1s 0s linear;
+}
+#clipPath2{
+    position: relative;
+    top: -100px;
+    width: 100vw;
+    height: 100px;
+    background-color: #4545A0; 
+    clip-path: polygon(0% 50%,100% 0%,100% 50%,0% 100%);
+    transition: clip-path 1s 0s linear;
+}
+#content{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 20px;
+}
+.card{
+    position: relative;
+    counter-increment: c1;
+    background-color: #aaa;
+    width: 30%;
+    height: 100px;
+}
+.card::before{
+    content: "";
+    transition: clip-path 1s;
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0% 0% 100% 0%);
+    /* clip-path: polygon(0% 0%,0% 0%,0% 0%,0% 100%); */
+}
+.card:hover::before{
+    content: "";
+    background-color: #4545A0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0% 0% 0% 0%);
+    /* clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%); */
+}
+#clipPath3{
+    width: 100vw;
+    height: 400px;
+    background-color: #7777E9; 
+    clip-path: ellipse(1100px 400px at 50% 0%);
+    transition: clip-path 1s 0s linear;
+    background-color: #7777E9;
+}
+
+
+#perspective {
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    position: relative;
+    perspective: 400px;
+}
+#perspective::before {
+    content: "Before";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 300px;
+    width: 300px;
+    height: 300px;
+    background-color: #8c1ace;
+    transition: transform 1s 0s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#perspective::after {
+    content: "After";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 300px;
+    width: 300px;
+    height: 300px;
+    background-color: #ce1a7d;
+    transition: transform 1s 0s linear;
+    transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#perspective:hover::before{
+    transform: rotateY(180deg);
+} 
+#perspective:hover::after{
+    transform: rotateY(0deg);
+} 
+#aspectRatio{
+    width: 30%;
+    margin: 100px auto;
+    background-color: coral;
+    aspect-ratio: 16/9;
+}
+
+#flipping{
+    width: 400px;
+    height: 300px;
+    margin: 100px auto;
+    font-size: 40px;
+    line-height: 300px;
+    text-align: center;
+    background-color: darksalmon;
+    transition: transform 1s , visibility .5s .5s ;
+    transition-timing-function: ease-in;
+    backface-visibility: hidden;
+}
+#flipping:hover{
+    transform: scaleX(-1);
+    visibility: hidden;
+}
+
+#scrolledelement{
+    height: 1200px;
+    width: 2000px;
+    background-color: burlywood;
+}
+#cont{
+    width: 400px;
+    height: 300px;
+    margin: 100px auto 0px;
+    font-size: 40px;
+    line-height: 1200px;
+    text-align: center;
+    overflow: auto;
+}
+#translated{
+    position: absolute;
+    top: 2400px;
+    left: 25%;
+    width: 600px;
+    height: 400px;
+    background-color: #8c1ace;
+    margin: 0px auto;
+    opacity: 0;
+    transition: transform .5s 0s linear, opacity .8s 0s linear;
+}
+
+aside{
+    width: 50px;
+    height: 400px;
+    background-color: rgb(156, 156, 156);
+    position: relative;
+    top: 150px;
+    border-radius: 40px;
+    padding: 10px 0px;
+    
+}
+aside > section{
+    background-color: #7777E9;
+    width: 40px;
+    margin: 10px auto;
+    aspect-ratio: 1/1.5;
+}
