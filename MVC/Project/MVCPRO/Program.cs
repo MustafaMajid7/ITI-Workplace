@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MVCPRO.Models;
 using MVCPRO.Repository.CourseRepository;
@@ -22,6 +23,16 @@ namespace MVCPRO
 				options.UseSqlServer(builder.Configuration.GetConnectionString("developmentConnectionString"));
 			});
 
+			builder.Services.AddIdentity<AppUser, IdentityRole>(o =>
+			{
+				o.Password.RequiredLength = 10;
+				o.Password.RequireUppercase = true;
+				o.Password.RequireLowercase = true;
+				o.Password.RequireDigit = true;
+
+			})
+			  .AddEntityFrameworkStores<InstituteCTX>();
+
 			builder.Services.AddSession();
 
 			builder.Services.AddScoped<ICourseRepository,CourseRepository>();
@@ -40,6 +51,7 @@ namespace MVCPRO
 
 			app.UseSession();
 
+			app.UseAuthentication();
 			app.UseAuthorization();
 
 			app.MapControllerRoute(

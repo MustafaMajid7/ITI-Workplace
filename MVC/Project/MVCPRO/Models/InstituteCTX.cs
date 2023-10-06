@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace MVCPRO.Models
 {
-	public class InstituteCTX : DbContext
+	public class InstituteCTX : IdentityDbContext<AppUser>
 	{
         public InstituteCTX() :base() 
         {}

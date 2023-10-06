@@ -25,12 +25,35 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="index">Courses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Instructor" asp-action="index">Instructors</a>
-                        </li>
+                        <ul class="navbar-nav ">
+                        @if (User.Identity.IsAuthenticated)
+                        {  
+                            <li class="nav-item">
+                                <span class="nav-link text-dark">Welcome @User.Identity.Name </span>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link text-dark">Welcome @User.Claims.SingleOrDefault(c=>c.Type =="address") </span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="index">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Instructor" asp-action="index">Instructors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="logout">Log out</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="addRole">Add Role</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="register">Register</a>
+                            </li>
+                        }
+                        </ul>
                     </ul>
                 </div>
             </div>

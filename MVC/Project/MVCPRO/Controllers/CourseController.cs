@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MVCPRO.Models;
 using MVCPRO.Repository.CourseRepository;
 using MVCPRO.Repository.DepartmentRepository;
@@ -6,6 +7,7 @@ using MVCPRO.VwModels;
 
 namespace MVCPRO.Controllers
 {
+	[Authorize]
     public class CourseController : Controller
 	{
 		public ICourseRepository courseRepository;
@@ -16,7 +18,6 @@ namespace MVCPRO.Controllers
             this.courseRepository = courseRepository;
 			this.departmentRepository = departmentRepository;
         }
-
 
         public IActionResult Index()
 		{		

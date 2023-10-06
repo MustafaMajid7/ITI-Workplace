@@ -253,3 +253,9 @@ E:\ITI\workplace\MVC\Project\MVCPRO\obj\Debug\net7.0\refint\MVCPRO.dll
 E:\ITI\workplace\MVC\Project\MVCPRO\obj\Debug\net7.0\MVCPRO.pdb
 E:\ITI\workplace\MVC\Project\MVCPRO\obj\Debug\net7.0\MVCPRO.genruntimeconfig.cache
 E:\ITI\workplace\MVC\Project\MVCPRO\obj\Debug\net7.0\ref\MVCPRO.dll
+E:\ITI\workplace\MVC\Project\MVCPRO\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\ITI\workplace\MVC\Project\MVCPRO\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\ITI\workplace\MVC\Project\MVCPRO\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\ITI\workplace\MVC\Project\MVCPRO\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+E:\ITI\workplace\MVC\Project\MVCPRO\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+E:\ITI\workplace\MVC\Project\MVCPRO\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
