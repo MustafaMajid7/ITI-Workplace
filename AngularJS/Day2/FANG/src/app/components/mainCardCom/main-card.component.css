@@ -1,0 +1,16 @@
+@media only screen and (min-width: 768px) {
+  
+    #imgCard{
+        width:600px;
+        height:350px;
+    }
+    .card{
+        background-color: transparent;
+        border: 0px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #imgCard{
+        width: 100%;
+    }
+}

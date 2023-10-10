@@ -1,0 +1,39 @@
+@media only screen and (min-width: 768px) {
+main{
+    height: 200vh;
+    text-align: left;
+}
+app-main-card:nth-child(2){
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    z-index: 1;
+}
+app-main-card:nth-child(3){
+    position: absolute;
+    top: 5%;
+    right: 2%;
+}
+app-main-card:nth-child(4){
+    position: absolute;
+    top: 40%;
+    right: 4%;
+}
+app-main-card:nth-child(5){
+    position: absolute;
+    top: 50%;
+    left: 2%;
+}
+app-main-card{
+    transition: transform .5s;
+}
+app-main-card:hover{
+    transform: scale(1.03);
+    color: brown;
+}
+}
+@media only screen and (max-width: 768px) {
+    body{
+        text-align: center;
+    }
+}
