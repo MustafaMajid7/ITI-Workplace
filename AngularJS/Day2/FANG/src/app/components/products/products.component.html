@@ -1,0 +1,42 @@
+<section class="container-fluid bg-dark text-center">
+  <section class="row">
+    <ng-container *ngFor="let product of products; let i = index">
+      <section class="col-lg-4 mb-3 h-100">
+        <div class="card bg-black text-light">
+          <img [src]="product.imgSrc" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text m-0 py-3">Price : {{ product.price }}</p>
+            <p class="card-text">
+              Quantity :
+              {{ product.quantity == 0 ? "unavailable" : product.quantity }}
+            </p>
+            <ng-container [ngSwitch]="product.quantity">
+              <button
+                *ngSwitchCase="1"
+                class="btn btn-warning form-control"
+                (click)="buyProduct(i)"
+              >
+                Buy Now
+              </button>
+              <button
+                *ngSwitchCase="0"
+                class="btn btn-danger form-control disabled"
+                (click)="buyProduct(i)"
+              >
+                Sold Out
+              </button>
+              <button
+                *ngSwitchDefault
+                class="btn btn-primary form-control"
+                (click)="buyProduct(i)"
+              >
+                Buy Now
+              </button>
+            </ng-container>
+          </div>
+        </div>
+      </section>
+    </ng-container>
+  </section>
+</section>

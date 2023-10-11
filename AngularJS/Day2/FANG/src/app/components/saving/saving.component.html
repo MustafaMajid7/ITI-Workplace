@@ -1,0 +1,64 @@
+<section class="bg-dark h-50 w-100 p-5 text-center">
+  <input
+    type="text"
+    name="name"
+    class="form-control bg-light text-center"
+    placeholder="enter your name"
+    [(ngModel)]="name"
+    (input)="checkName()"
+  />
+  <span class="d-block text-danger" *ngIf="nameFlag"
+    >name must greater than 2 characters</span
+  >
+  <input
+    type="number"
+    name="age"
+    class="form-control bg-light mt-3 text-center"
+    placeholder="enter your age"
+    [(ngModel)]="age"
+    (input)="checkAge()"
+  />
+  <span class="d-block text-danger" *ngIf="ageFlag"
+    >age must at least equal 18</span
+  >
+  <input
+    type="button"
+    value="Save"
+    class="btn btn-secondary text-dark px-4 my-3 text-center"
+    placeholder="enter your age"
+    (click)="save()"
+    [ngClass]="{
+      'btn-success': !nameFlag && !ageFlag,
+      'btn-danger': nameFlag || ageFlag
+    }"
+  />
+  <span class="d-block text-danger" *ngIf="DuplicateFlag">Duplicated data</span>
+  <table
+    class="table table-hover table-info table-bordered border-secondary text-center"
+  >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let person of data; let i = index">
+        <tr>
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ person.name }}</td>
+          <td>{{ person.age }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-close"
+              (click)="delete(i)"
+            ></button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</section>

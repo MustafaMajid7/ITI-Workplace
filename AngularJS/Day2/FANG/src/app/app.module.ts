@@ -7,7 +7,10 @@ import { HeaderComponent } from './components/headerCom/header.component';
 import { MainComponent } from './components/mainCom/main.component';
 import { MainCardComponent } from './components/mainCardCom/main-card.component';
 import { FormsModule } from '@angular/forms';
-import { SavingComponent } from './components/saving.component';
+import { SavingComponent } from './components/saving/saving.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ComponentsBindingComponent } from './components/components-binding/components-binding.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +19,11 @@ import { SavingComponent } from './components/saving.component';
     HeaderComponent,
     MainComponent,
     MainCardComponent,
-    SavingComponent
-  ],
+    SavingComponent,
+    ProductsComponent,
+    ComponentsBindingComponent,
+    NavBarComponent
+    ],
   imports: [ FormsModule,
     BrowserModule
   ],
