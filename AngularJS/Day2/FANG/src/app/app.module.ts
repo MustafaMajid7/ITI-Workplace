@@ -11,6 +11,8 @@ import { SavingComponent } from './components/saving/saving.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ComponentsBindingComponent } from './components/components-binding/components-binding.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     SavingComponent,
     ProductsComponent,
     ComponentsBindingComponent,
-    NavBarComponent
+    NavBarComponent,
+    HomeComponent,
+    AboutComponent
     ],
   imports: [ FormsModule,
     BrowserModule

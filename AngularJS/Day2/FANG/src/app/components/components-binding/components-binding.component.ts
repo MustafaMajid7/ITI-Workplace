@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ComponentsBindingComponent {
 
+  PageNumber:number = 0;
+
+  linkNumber(link:number):void{
+    this.PageNumber = link;
+  }
+  
 }

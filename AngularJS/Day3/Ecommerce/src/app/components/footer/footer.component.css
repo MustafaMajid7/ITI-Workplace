@@ -1,0 +1,11 @@
+#foot{
+    background-color: #181733;
+}
+#name{
+    all: unset;
+    background-image: linear-gradient(to bottom right, #0666FA, #E3234F);
+    color: transparent; 
+    background-clip: text;
+    font-size: 13vw;
+    text-transform: uppercase;
+}

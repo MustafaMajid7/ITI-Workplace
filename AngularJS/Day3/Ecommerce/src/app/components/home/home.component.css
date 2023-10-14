@@ -1,0 +1,13 @@
+section{
+    background-size: 100% 100%;
+}
+#sec1{
+    background-image: url("/assets/images/img\ \(1\).jpg");
+}
+
+#sec2{
+    background-image: url("/assets/images/img\ \(2\).jpg");
+}
+#sec3{
+    background-image: url("/assets/images/img\ \(3\).jpg");
+}

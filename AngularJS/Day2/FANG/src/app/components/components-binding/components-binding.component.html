@@ -1,1 +1,7 @@
-<p>components-binding works!</p>
+<!--                                Task (components binding)                             -->
+
+<app-nav-bar (myEvent)="linkNumber($event)"></app-nav-bar>
+<section [ngSwitch]="PageNumber">
+  <app-home *ngSwitchCase="1"></app-home>
+  <app-about *ngSwitchCase="2"></app-about>
+</section>
