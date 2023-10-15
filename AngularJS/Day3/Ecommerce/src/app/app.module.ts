@@ -10,6 +10,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ProductsComponent,
     NotFoundComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

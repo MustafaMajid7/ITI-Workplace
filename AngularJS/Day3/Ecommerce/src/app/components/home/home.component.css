@@ -11,3 +11,8 @@ section{
 #sec3{
     background-image: url("/assets/images/img\ \(3\).jpg");
 }
+section > section{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}

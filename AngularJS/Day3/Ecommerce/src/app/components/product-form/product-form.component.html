@@ -1,1 +1,59 @@
-<p>product-form works!</p>
+<form (submit)="addProduct($event)">
+  <div class="row g-3 align-items-center m-3">
+    <div class="col-3">
+      <label for="Pname" class="col-form-label">Product Name : </label>
+    </div>
+    <div class="col-auto">
+      <input
+        type="text"
+        name="name"
+        id="Pname"
+        class="form-control"
+        [(ngModel)]="product.name"
+      />
+    </div>
+  </div>
+  <div class="row g-3 align-items-center m-3">
+    <div class="col-3">
+      <label for="PCat" class="col-form-label">Product Category : </label>
+    </div>
+    <div class="col-auto">
+      <input
+        type="text"
+        name="cat"
+        id="PCat"
+        class="form-control"
+        [(ngModel)]="product.category"
+      />
+    </div>
+  </div>
+  <div class="row g-3 align-items-center m-3">
+    <div class="col-3">
+      <label for="Pprice" class="col-form-label">Product Price : </label>
+    </div>
+    <div class="col-auto">
+      <input
+        type="number"
+        name="price"
+        id="Pprice"
+        class="form-control"
+        [(ngModel)]="product.price"
+      />
+    </div>
+  </div>
+  <div class="row g-3 align-items-center m-3">
+    <div class="col-3">
+      <label for="Pimage" class="col-form-label">Product Image : </label>
+    </div>
+    <div class="col-auto">
+      <input type="file" name="image" id="Pnimage" class="form-control" />
+    </div>
+  </div>
+  <div class="row g-3 align-items-center m-3 justify-content-center">
+    <div class="col-auto">
+      <button type="submit" class="form-control btn btn-outline-primary">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

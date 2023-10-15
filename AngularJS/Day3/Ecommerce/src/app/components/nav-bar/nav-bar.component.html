@@ -1,6 +1,6 @@
 <nav
   id="nav"
-  class="navbar navbar-expand-lg navbar-light text-light position-sticky vw-100"
+  class="navbar navbar-expand-lg navbar-light text-light z-1 position-fixed m-0 container-fluid"
 >
   <div class="container-fluid">
     <a class="navbar-brand text-light" href="#">
@@ -125,3 +125,18 @@
     </div>
   </div>
 </nav>
+
+<nav style="height: 75px"></nav>
+<!-- <script>
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      document.getElementById("nav").classList.add("position-fixed");
+      // add padding top to show content behind navbar
+      document.body.style.paddingTop = "80px";
+    } else {
+      document.getElementById("nav").classList.remove("position-fixed");
+      // remove padding top from body
+      document.body.style.paddingTop = "0";
+    }
+  });
+</script> -->

@@ -1,0 +1,15 @@
+<section id="back" class="p-3 bg-body-secondary"></section>
+<section id="parent" class="container-fluid position-fixed">
+  <section class="row fs-3 fw-bold ps-lg-5 pt-lg-5 text-dark bg-light h-75">
+    <section class="col-7">
+      <p>Product Number : {{ product?.id }}</p>
+      <p>Product Name : {{ product?.name }}</p>
+      <p>Product Category : {{ product?.category }}</p>
+      <p>Product Price : {{ product?.price }}</p>
+    </section>
+    <section class="col-5">
+      <img [src]="product?.image" class="w-100 h-50" />
+    </section>
+  </section>
+  <button class="btn btn-close" (click)="Close()"></button>
+</section>

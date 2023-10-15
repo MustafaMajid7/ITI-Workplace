@@ -1,1 +1,38 @@
-<p>products works!</p>
+<app-details
+  *ngIf="detailsVisibility"
+  [productID]="productID"
+  (myevent)="detailsVisibilityFun(false)"
+></app-details>
+
+<section class="container-fluid bg-light my-2">
+  <section class="row">
+    <div *ngFor="let p of products" class="card col-lg-3">
+      <section class="overflow-hidden h-75 w-100">
+        <img [src]="p.image" class="w-100 h-100 d-block" />
+      </section>
+      <div class="card-body h-25 p-2 overflow-auto position-relative">
+        <section id="icons" class="position-absolute">
+          <i
+            class="bi bi-eye-fill text-info fs-5 btn p-0"
+            (click)="sendProductID(p.id)"
+          ></i>
+          <i
+            class="bi bi-pencil-square text-warning fs-5 btn p-0 d-block"
+            [routerLink]="['/edit', p.id]"
+          ></i>
+          <i
+            class="bi bi-trash3-fill text-danger fs-5 btn p-0 d-block"
+            (click)="productService.deleteProduct(p.id)"
+          ></i>
+        </section>
+        <h5 class="card-title text-secondary text-uppercase">
+          {{ p.category }}
+        </h5>
+        <p class="card-text text-capitalize">
+          {{ p.name }}
+        </p>
+        <p class="card-text">{{ p.price }}$</p>
+      </div>
+    </div>
+  </section>
+</section>
