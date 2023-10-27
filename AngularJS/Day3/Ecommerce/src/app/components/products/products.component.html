@@ -5,10 +5,10 @@
 ></app-details>
 
 <section class="container-fluid bg-light my-2">
-  <section class="row">
-    <div *ngFor="let p of products" class="card col-lg-3">
+  <section class="row row-gap-2">
+    <div *ngFor="let p of products" class="card col-lg-3 px-1">
       <section class="overflow-hidden h-75 w-100">
-        <img [src]="p.image" class="w-100 h-100 d-block" />
+        <img [src]="p.image" class="w-100 h-100 d-block rounded" />
       </section>
       <div class="card-body h-25 p-2 overflow-auto position-relative">
         <section id="icons" class="position-absolute">

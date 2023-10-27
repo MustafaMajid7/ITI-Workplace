@@ -32,7 +32,12 @@ namespace MVCPRO.Controllers
                 if (identityResult.Succeeded)
                     return View();
                 else
-                    ModelState.AddModelError("", "invalid Role Name");
+                {
+                    foreach (var item in identityResult.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
             }
             return View(roleViewModel);
         }

@@ -18,6 +18,42 @@ namespace MVCPRO.Controllers
         }
 
         [HttpGet]
+        public IActionResult RegisterAdmin()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegisterAdmin(RegisterModel registerModel)
+        {
+            if (ModelState.IsValid)
+            {
+                AppUser appUser = new AppUser();
+                appUser.UserName = registerModel.UserName;
+                appUser.PasswordHash = registerModel.Password;
+                appUser.address = registerModel.Address;
+
+                IdentityResult identityResult = await userManager.CreateAsync(appUser, registerModel.Password);
+
+                if (identityResult.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(appUser, "Admin");
+                    await signInManager.SignInAsync(appUser, false);
+                    return RedirectToAction("index", "Home");
+                }
+                else
+                {
+                    foreach (var item in identityResult.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
+
+            }
+            return View(registerModel);
+        }
+
+        [HttpGet]
 		public IActionResult Register()
 		{
 			return View();
@@ -38,7 +74,7 @@ namespace MVCPRO.Controllers
 				if (identityResult.Succeeded)
 				{
 					await signInManager.SignInAsync(appUser, false);
-					return RedirectToAction("index","Course");
+					return RedirectToAction("index","Home");
 				}
 				else
 				{
