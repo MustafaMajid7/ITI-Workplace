@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./jquery.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="./bootstrap.bundle.min.js"></script>
+    <style>
+      input {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container m-4 bg-info p-5">
+      <form
+        action="https://localhost:7081/api/Student"
+        method="post"
+        class="form-group"
+      >
+        <input type="number" name="st_Id" class="form-control" />
+        <input type="text" name="st_Fname" class="form-control" />
+        <input type="text" name="st_Lname" class="form-control" />
+        <input type="text" name="st_Address" class="form-control" />
+        <input type="number" name="st_Age" class="form-control" />
+        <input type="number" name="dept_Id" class="form-control" />
+        <input type="number" name="st_super" class="form-control" />
+        <input type="submit" value="submit" class="btn btn-dark" />
+      </form>
+    </main>
+
+    <script>
+      //   $(function () {
+      //     $.ajax({
+      //       url: "https://localhost:7081/api/Student",
+      //       method: "GET",
+      //       success: function (result) {
+      //         alert(JSON.stringify(result));
+      //       },
+      //     });
+      //   });
+      const form = document.querySelector("form");
+      form.addEventListener("submit", convertData);
+      async function convertData(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        let formDataObject = Object.fromEntries(data.entries());
+        const formated = JSON.stringify(formDataObject);
+        let fetchOptions = {
+          //HTTP method set to POST.
+          method: "POST",
+          //Set the headers that specify you're sending a JSON body request and accepting JSON response
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          // POST request body as JSON string.
+          body: formated,
+        };
+
+        let res = await fetch(
+          "https://localhost:7081/api/Student",
+          fetchOptions
+        );
+        console.log(res.json());
+      }
+    </script>
+  </body>
+</html>
