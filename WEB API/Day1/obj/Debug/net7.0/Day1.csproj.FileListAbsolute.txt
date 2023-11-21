@@ -75,3 +75,6 @@ E:\ITI\workplace\WEB API\Day1\obj\Debug\net7.0\refint\Day1.dll
 E:\ITI\workplace\WEB API\Day1\obj\Debug\net7.0\Day1.pdb
 E:\ITI\workplace\WEB API\Day1\obj\Debug\net7.0\Day1.genruntimeconfig.cache
 E:\ITI\workplace\WEB API\Day1\obj\Debug\net7.0\ref\Day1.dll
+E:\ITI\workplace\WEB API\Day1\bin\Debug\net7.0\AutoMapper.dll
+E:\ITI\workplace\WEB API\Day1\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\ITI\workplace\WEB API\Day1\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
