@@ -18,14 +18,23 @@ namespace Day1.Repository
 		{
 			return pcContext.Set<T>().Where(func).FirstOrDefault();
 		}
-		public T addCourse(T entity)
+		public T add(T entity)
 		{
 			return pcContext.Set<T>().Add(entity).Entity;
 		}
-		public T updateCourse(T entity)
+		public T update(T entity)
 		{
 			pcContext.ChangeTracker.Clear();
 			return pcContext.Set<T>().Update(entity).Entity;
+		}
+		public T delete(T entity)
+		{
+			return pcContext.Set<T>().Remove(entity).Entity;
+		}
+
+		public void addRange(List<T> entities)
+		{
+			pcContext.Set<T>().AddRange(entities);
 		}
 	}
 }

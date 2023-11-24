@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Day1.Repository;
+using OfficeOpenXml;
 
 namespace Day1
 {
@@ -16,6 +17,8 @@ namespace Day1
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
+
+			ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Or LicenseContext.Commercial if you have a commercial license
 
 			builder.Services.AddControllers();
 

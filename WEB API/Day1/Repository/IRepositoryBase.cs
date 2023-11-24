@@ -2,9 +2,11 @@
 {
 	public interface IRepositoryBase<T> where T : class
 	{
-		T addCourse(T entity);
+		T add(T entity);
+		void addRange(List<T> entities);
+		T delete(T entity);
 		List<T> getAll();
 		T getOne(Func<T, bool> func);
-		T updateCourse(T entity);
+		T update(T entity);
 	}
 }

@@ -6,6 +6,7 @@ namespace Day1.Repository
 	{
         public SomeFunctionality<Course> Course { get; }
         public RepositoryBase<Instructor> Instructor { get; }
-        int complete();
+		public RepositoryBase<Country> Country { get; }
+		int complete();
 	}
 }
