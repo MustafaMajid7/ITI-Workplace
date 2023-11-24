@@ -82,7 +82,7 @@
 					success: (result) => {
 						document.getElementById("crs_list").innerHTML = "";
 
-						for (let item of result) {
+						for (let item of result1) {
 							document.getElementById("crs_list").innerHTML
 								+= "<option value=" + item.id + ">" + item.name + "</option>";
 						}

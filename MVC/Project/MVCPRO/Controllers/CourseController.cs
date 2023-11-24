@@ -18,7 +18,7 @@ namespace MVCPRO.Controllers
             this.courseRepository = courseRepository;
 			this.departmentRepository = departmentRepository;
         }
-
+		[AllowAnonymous]
         public IActionResult Index()
 		{		
 			return View(courseRepository.GetAll());
@@ -35,6 +35,8 @@ namespace MVCPRO.Controllers
             }
             return Json(courses);
 		}
+
+		[Authorize(Roles ="Admin,Instructor")]
 		public IActionResult NewCourse()
 		{
 			ViewBag.departs = departmentRepository.GetAll();
@@ -68,13 +70,14 @@ namespace MVCPRO.Controllers
 			return minDegree>=degree?Json(false):Json(true);
 		}
 
-		public IActionResult EditCourse(CourseModel courseModel)
+        [Authorize(Roles = "Admin,Instructor")]
+        public IActionResult EditCourse(CourseModel courseModel)
 		{
             courseModel.departments = departmentRepository.GetAll();
             return View(courseModel);
 		}
 
-		[HttpPost]
+        [HttpPost]
 		[ValidateAntiForgeryToken]
 		public IActionResult EditCourse(CourseModel courseModel, int id)
 		{
